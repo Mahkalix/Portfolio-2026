@@ -1,0 +1,40 @@
+@use '../1_settings/var' as *;
+
+// =============================================================================
+// LAYOUTS
+// =============================================================================
+
+.l-stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--stack-gap, $spacer-4);
+}
+
+.l-side {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--side-gap, 0);
+    align-items: center;
+    justify-content: space-between;
+
+    &\@md {
+        @media (min-width: $tablet) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+}
+
+.l-side-force {
+    display: flex;
+    gap: var(--side-gap, 0);
+    align-items: center;
+    justify-content: space-between;
+
+    &\@md {
+        @media (min-width: $tablet) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+}

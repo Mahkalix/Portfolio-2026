@@ -1,0 +1,85 @@
+@use '../1_settings/var' as *;
+@use 'sass:list';
+
+// =============================================================================
+// Utilitaires pour les espacements
+// =============================================================================
+// On utilises des raccourcis pour le nommage de ces classes: m = margin, p = padding, t = top, b = bottom, l = left, r = right
+// La nomenclature de la classe d'espacement :
+// u-{ Raccourci de nommage}
+
+/*
+ *  Marges automatiques
+ */
+.u-m-auto {
+    margin: auto;
+}
+
+// x = axe x = centrage horizontal
+.u-mx-auto {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+// y = axe y = centrage vertical
+.u-my-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.u-mb-auto {
+    margin-bottom: auto;
+}
+
+.u-mt-auto {
+    margin-top: auto;
+}
+
+.u-ml-auto {
+    margin-left: auto;
+}
+
+.u-mr-auto {
+    margin-right: auto;
+}
+
+/*
+ * Génération des classes utilitaires d'espacements
+ * Tous les niveaux de 0 à 14 sont généré pour tous les types de marges interne et externe (margin & padding - top/right/bottom/left)
+ * Exemples de classes générés:
+ * .u-m-0 { margin: 0; }
+ * .u-mb-4 { margin-bottom: $spacer-4; // 16px }
+ * .u-ml-8 { margin-left: $spacer-8; // 64px }
+ * .u-pr-8 { padding-right: $spacer-8; // 64px }
+ * .u-pb-14 { padding-bottom: $spacer-14; // 144px }
+ */
+@each $spacer-shortname, $spacer-longname in $spacer-shortnames {
+    @for $i from 1 through list.length($spacers) {
+        .u-#{$spacer-shortname}-#{$i - 1} {
+            #{$spacer-longname}: list.nth($spacers, $i);
+        }
+    }
+}
+
+/*
+ * Classes utilitaires d'espacement responsive
+ * Tous les styles responsive sont appliqué au point de rupture spécifié et au-dessus
+ * Exemples de classes générés:
+ * @media (min-width: 1024px) {
+ *      .u-m-md-0 { margin: 0; }
+ *  }
+ * @media (min-width: 792px) {
+ *      .u-pb-sm-12 { padding-bottom: 112px; }
+ *  }
+ */
+@each $size-shortname, $breakpoint in $grid {
+    @media (min-width: $breakpoint) {
+        @each $spacer-shortname, $spacer-longname in $spacer-shortnames {
+            @for $i from 1 through list.length($spacers) {
+                .u-#{$spacer-shortname}-#{$size-shortname}-#{$i - 1} {
+                    #{$spacer-longname}: list.nth($spacers, $i);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+@use "../2_tools/tools" as *;
+
+// =============================================================================
+// Utilitaires qui affectent la typographie
+// =============================================================================
+
+/*
+Utilisation des suffixes responsive :
+class="u-text-right@md"
+*/
+
+@include responsive-utility("u-text-right", "text-align", "right");
+@include responsive-utility("u-text-center", "text-align", "center");
+
+/*
+Fin de compilation
+*/
+.u-font-medium {
+  font-weight: 500;
+}
+
+.u-font-bold {
+  font-weight: 700;
+}
+
+.u-font-black {
+  font-weight: 900;
+}
+
+/*
+ * Utilitaire permettant une troncature sur un nombre fixe de ligne (par défaut 3)
+ * Dans l'HTML, utiliser l'attribut style pour affecter la variable --lines-to-show
+ * Exemple, si besoin d'afficher uniquement les 5 premières lignes :
+ * <p class="u-truncate" style="--lines-to-show: 5;">...</p>
+ */
+.u-truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--lines-to-show, 3);
+  line-clamp: var(--lines-to-show, 3);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

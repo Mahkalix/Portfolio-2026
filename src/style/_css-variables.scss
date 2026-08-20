@@ -1,0 +1,116 @@
+@use "1_settings/var" as *;
+
+:root {
+  // =============================================================================
+  // COLORS
+  // =============================================================================
+  --color-black: #000;
+  --color-gray-1: #222;
+  --color-gray-2: #444;
+  --color-gray-3: #666;
+  --color-gray-4: #a5a5a5;
+  --color-gray-5: #ccc;
+  --color-gray-6: #eee;
+  --color-white: #fff;
+  --primary-color-lighter: #acfffa;
+  --primary-color-light: #5ffaf0;
+  --primary-color: #00dccf;
+  --primary-color-dark: #008383;
+  --primary-color-darker: #005f6c;
+  --secondary-color-lighter: #8c70fb;
+  --secondary-color-light: #7333db;
+  --secondary-color: #4f039b;
+  --secondary-color-dark: #3a0067;
+  --secondary-color-darker: #150025;
+  --tertiary-color-lighter: #fad4ef;
+  --tertiary-color-light: #e362bf;
+  --tertiary-color: #b70585;
+  --tertiary-color-dark: #740053;
+  --tertiary-color-darker: #310023;
+  --color-information: #036dcf;
+  --color-success: #00840d;
+  --color-warning: #fa4c02;
+  --color-fail: #cd0000;
+
+  // =============================================================================
+  // TYPOGRAPHY
+  // =============================================================================
+  --font-size-xxs: 8px;
+  --font-size-xs: 16px;
+  --font-size-sm: 20px;
+  --font-size-md: 24px;
+  --font-size-lg: 28px;
+  --font-size-sm-subtitle: 52px;
+  --font-size-lg-subtitle: 88px;
+  --font-size-md-title: 295px;
+
+  --line-height-tight: 1.2;
+  --line-height-sm: 1.4;
+  --line-height-md: 1.5;
+  --line-height-relaxed: 1.6;
+  --line-height-title: 1.4;
+  --line-height-text: 1.5;
+
+  // =============================================================================
+  // PORTFOLIO 2026 — FIGMA SOURCE OF TRUTH
+  // =============================================================================
+  --portfolio-bg: #000;
+  --portfolio-text: #fffaff;
+  --portfolio-muted: rgba(255, 250, 255, 0.68);
+  --portfolio-surface: rgba(255, 250, 255, 0.06);
+  --portfolio-glass: rgba(255, 255, 255, 0.24);
+  --portfolio-border: rgba(255, 255, 255, 0.72);
+  --portfolio-accent: #ef8152;
+  --portfolio-accent-dark: #581d25;
+  --portfolio-radius-sm: 5px;
+  --portfolio-radius-md: 22px;
+  --portfolio-radius-pill: 999px;
+  --portfolio-page-padding: clamp(20px, 4.17vw, 60px);
+  --portfolio-section-gap: clamp(35px, 4.86vw, 70px);
+  --portfolio-transition: 300ms cubic-bezier(.2, .8, .2, 1);
+
+  // =============================================================================
+  // ESPACEMENTS
+  // =============================================================================
+  // En mobile les espacements sont tous divisé par 2
+  --spacer: 4px;
+
+  @media (min-width: $mobile) {
+    --spacer: 8px;
+  }
+}
+
+// =============================================================================
+// THEME
+// =============================================================================
+[data-theme="dark"] {
+  --color-black: #fff;
+  --color-gray-1: #eee;
+  --color-gray-2: #ccc;
+  --color-gray-3: #a5a5a5;
+  --color-gray-4: #666;
+  --color-gray-5: #444;
+  --color-gray-6: #222;
+  --color-white: #000;
+  --primary-color-lighter: #005f6c;
+  --primary-color-light: #008383;
+  --primary-color: #00dccf;
+  --primary-color-dark: #5ffaf0;
+  --primary-color-darker: #acfffa;
+  --secondary-color-lighter: #150025;
+  --secondary-color-light: #3a0067;
+  --secondary-color: #4f039b;
+  --secondary-color-dark: #7333db;
+  --secondary-color-darker: #8c70fb;
+  --tertiary-color-lighter: #310023;
+  --tertiary-color-light: #740053;
+  --tertiary-color: #b70585;
+  --tertiary-color-dark: #e362bf;
+  --tertiary-color-darker: #fad4ef;
+  --color-information: #b6dcff;
+  --color-success: #c1ffab;
+  --color-warning: #ffe2c0;
+  --color-fail: #ffacac;
+
+  color-scheme: dark;
+}

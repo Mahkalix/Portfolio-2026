@@ -1,0 +1,43 @@
+@use '../1_settings/var' as *;
+@use '../2_tools/tools' as *;
+
+// =============================================================================
+// GRID
+// =============================================================================
+
+// Générations de classes types Bootstrap
+
+/* Exemple d'utilisation :
+<div class="row" style="--row-gap: 16px;">
+    <div class="col-md-6">
+    <div class="col-md-6">
+</div>
+ */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: var(--row-gap, 0);
+    margin: 0 calc($grid-gutter-width * -.5);
+
+    > * {
+        flex-grow: 1;
+        padding-right: calc($grid-gutter-width * .5);
+        padding-left: calc($grid-gutter-width * .5);
+    }
+}
+
+.col {
+    flex: 1 0 0%;
+}
+
+[class*="col-"] {
+    flex-grow: 0;
+    padding-right: calc($grid-gutter-width * .5);
+    padding-left: calc($grid-gutter-width * .5);
+    width: 100%;
+    min-height: 1px;
+}
+
+// Création du colonnage à la Bootstrap
+@include make-columns;

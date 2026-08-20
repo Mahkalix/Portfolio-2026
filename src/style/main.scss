@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+/* ===================================================================
+ * DEFAULT
+ * ================================================================= */
+
+/**
+ * SETTINGS : Variables globales, couleurs, polices, etc.
+ * TOOLS : Outils disponibles de manières globales, mixins, fonctions
+ * GENERIC : Styles de niveau 0 (Normalize.css, resets, box-sizing)
+ * ELEMENTS : Éléments HTML (sélecteur de balises), H1–H6, liens, listes, etc
+ * LAYOUT : Éléments de mise en page (Grille etc...)
+ * OBJECTS : Composants simples (Boutons, Listes etc...)
+ * COMPONENTS : Composants (Cartes, Fil d'ariane, Header, Footer, Navigations etc...)
+ * SECTIONS : Modules (Actualités, événements etc...)
+ * UTILITIES : Les atouts, utilitaires avec des spécificités maximales.
+ */
+@forward "2_tools/fonts";
+
+/* Variables CSS */
+@forward "css-variables";
+
+/* Génériques */
+@forward "3_generic/reset";
+@forward "3_generic/typography";
+
+/* Modules */
+@forward "modules";

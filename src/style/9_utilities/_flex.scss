@@ -1,0 +1,127 @@
+@use '../1_settings/var' as *;
+
+// =============================================================================
+// Utilitaires flex
+// =============================================================================
+// Seul le point de rupture tablette @md est utilisé ici, mais a agrémenter selon les besoin
+// Possible d'utiliser le @md pour le min-width et le @md- pour le max-width
+
+.u-flex {
+    display: flex;
+
+    &\@md {
+        @media (min-width: $tablet) {
+            display: flex;
+        }
+    }
+}
+
+.u-flex-column {
+    flex-direction: column;
+
+    &\@md {
+        @media (min-width: $tablet) {
+            flex-direction: column;
+        }
+    }
+}
+
+.u-flex-column-reverse {
+    flex-direction: column-reverse;
+
+    &\@md {
+        @media (min-width: $tablet) {
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+.u-flex-row {
+    flex-direction: row;
+
+    &\@md {
+        @media (min-width: $tablet) {
+            flex-direction: row;
+        }
+    }
+}
+
+.u-flex-row-reverse {
+    flex-direction: row-reverse;
+
+    &\@md {
+        @media (min-width: $tablet) {
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+.u-justify-start {
+    justify-content: start;
+
+    &\@md {
+        @media (min-width: $tablet) {
+            justify-content: start;
+        }
+    }
+}
+
+.u-justify-center {
+    justify-content: center;
+
+    &\@md {
+        @media (min-width: $tablet) {
+            justify-content: center;
+        }
+    }
+}
+
+.u-justify-end {
+    justify-content: flex-end;
+
+    &\@md {
+        @media (min-width: $tablet) {
+            justify-content: flex-end;
+        }
+    }
+}
+
+.u-align-start {
+    align-items: flex-start;
+
+    &\@md {
+        @media (min-width: $tablet) {
+            align-items: flex-start;
+        }
+    }
+}
+
+.u-align-center {
+    align-items: center;
+
+    &\@md {
+        @media (min-width: $tablet) {
+            align-items: center;
+        }
+    }
+}
+
+.u-align-end {
+    align-items: flex-end;
+
+    &\@md {
+        @media (min-width: $tablet) {
+            align-items: flex-end;
+        }
+    }
+}
+
+.u-space-between {
+    justify-content: space-between;
+
+    &\@md {
+        @media (min-width: $tablet) {
+            justify-content: space-between;
+        }
+    }
+}

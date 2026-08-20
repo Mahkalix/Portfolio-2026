@@ -1,0 +1,22 @@
+@use '../1_settings/var' as *;
+
+// =============================================================================
+// FORMS
+// =============================================================================
+
+// Fieldsets
+fieldset {
+    margin: 0;
+    border-color: $color-gray-4;
+    padding: $spacer-4;
+
+    &:not(:last-child) {
+        margin-bottom: 16px;
+    }
+}
+
+legend {
+    padding: 0 5px;
+    font-weight: 700;
+    font-style: italic;
+}

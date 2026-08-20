@@ -1,0 +1,87 @@
+/*
+ * Utilitaires - préfixé par u-
+ */
+
+// Display
+.u-block {
+    display: block;
+}
+
+.u-inline {
+    display: inline;
+}
+
+.u-inline-block {
+    display: inline-block;
+}
+
+.u-inline-flex {
+    display: inline-flex;
+}
+
+// Lien étendu
+.u-cover {
+    &::before {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        content: '';
+    }
+}
+
+// Image en cover
+.u-img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.u-img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.u-relative {
+    position: relative;
+}
+
+.u-overflow-hidden {
+    overflow: hidden;
+}
+
+.u-rounded {
+    border-radius: 50%;
+}
+
+.u-list-unstyled {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*
+ * Utilitaires Width
+ */
+.u-w-25 {
+    width: 25%;
+}
+
+.u-w-33 {
+    width: calc(100% / 3);
+}
+
+.u-w-50 {
+    width: 50%;
+}
+
+.u-w-66 {
+    width: calc(100% - (100% / 3));
+}
+
+.u-w-75 {
+    width: 75%;
+}
+
+.u-w-100 {
+    width: 100%;
+}

@@ -1,0 +1,69 @@
+// =============================================================================
+// COLORS
+// =============================================================================
+
+// =======================================
+// Nuances de gris
+// =======================================
+$black: var(--color-black) !default;
+$color-gray-1: var(--color-gray-1) !default;
+$color-gray-2: var(--color-gray-2) !default;
+$color-gray-3: var(--color-gray-3) !default;
+$color-gray-4: var(--color-gray-4) !default;
+$color-gray-5: var(--color-gray-5) !default;
+$color-gray-6: var(--color-gray-6) !default;
+$color-white: var(--color-white) !default;
+
+// =======================================
+// Couleurs d'avant plan
+// =======================================
+
+$color-dark: var(--color-black);
+$color-light: var(--color-white);
+
+// Couleurs principales du thème
+$color-default: $color-gray-1;
+$color-primary: var(--primary-color) !default;
+$color-secondary: var(--secondary-color) !default;
+$color-tertiary: var(--tertiary-color) !default;
+
+// Déclinaisons primaires
+$color-primary-lighter: var(--primary-color-lighter) !default;
+$color-primary-light: var(--primary-color-light) !default;
+$color-primary-dark: var(--primary-color-dark) !default;
+$color-primary-darker: var(--primary-color-darker) !default;
+
+// Déclinaisons secondaires
+$color-secondary-lighter: var(--secondary-color-lighter) !default;
+$color-secondary-light: var(--secondary-color-light) !default;
+$color-secondary-dark: var(--secondary-color-dark) !default;
+$color-secondary-darker: var(--secondary-color-darker) !default;
+
+// Déclinaisons tertiaires
+$color-tertiary-lighter: var(--tertiary-color-lighter) !default;
+$color-tertiary-light: var(--tertiary-color-light) !default;
+$color-tertiary-dark: var(--tertiary-color-dark) !default;
+$color-tertiary-darker: var(--tertiary-color-darker) !default;
+
+// ============================
+// Autre couleurs
+// ============================
+
+// Couleurs d'état
+$color-information: var(--color-information);
+$color-success: var(--color-success);
+$color-warning: var(--color-warning);
+$color-fail: var(--color-fail);
+$alert-colors: (
+  'information': $color-information,
+  'success':     $color-success,
+  'warning':     $color-warning,
+  'fail':        $color-fail
+);
+
+// Couleurs de marques
+$brand-facebook: #3B5998;
+$brand-twitter: #26A7DE;
+$brand-linkedin: #0072B1;
+$brand-instagram: #833AB4;
+$brand-youtube: #C4302B;

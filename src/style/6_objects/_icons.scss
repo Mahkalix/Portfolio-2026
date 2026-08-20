@@ -1,0 +1,32 @@
+@use "../1_settings/var" as *;
+
+// =============================================================================
+// ICONS
+// =============================================================================
+
+// Utilisation dans le HTML : <i class="o-icon o-icon--facebook" aria-hidden="true"></i>
+// Voir les icones disponibles dans le fichier de variables 1_settings/_icons.scss
+
+.o-icon {
+  display: block;
+
+  &::before {
+    display: block;
+    text-transform: none;
+    line-height: 1;
+
+    // Par défaut la couleur de l'icône est égale à la couleur du texte adjacent
+    color: currentcolor;
+    font-family: $font-family-icons;
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @each $icon, $code in $icons {
+    &--#{$icon} {
+      &::before {
+        content: $code;
+      }
+    }
+  }
+}

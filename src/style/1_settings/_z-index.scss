@@ -1,0 +1,15 @@
+// =============================================================================
+// Z-INDEX
+// =============================================================================
+
+// Utilisation : map.get($z-index, "modal")
+// + Déclarer l'utilisation du map sass dans le fichier scss :
+// @use "sass:map";
+$z-index: (
+    sticky : 10,
+    overlay : 100,
+    menu : 101,
+    layer : 1000,
+    toplayer: 1001,
+    modal : 10000,
+);

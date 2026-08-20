@@ -1,0 +1,299 @@
+@use "../1_settings/var" as *;
+
+// =============================================================================
+// MIXINS
+// =============================================================================
+
+/*
+ *   IMAGE DECLARATION
+ *   => @a : image file name
+ *   => @b : background color, repeat...
+ *   Example :
+ *       .background-image('bullet.png', no-repeat 0 0 #fff);
+ */
+@mixin background($a, $b...) {
+  background: url("#{$directory-image}/#{$a}") $b;
+}
+
+@mixin background-image($a) {
+  background-image: url("#{$directory-image}/#{$a}");
+}
+
+@mixin content-image($a) {
+  content: url("#{$directory-image}/#{$a}");
+}
+
+/**
+ * GRADIENT
+ */
+@mixin linear-gradient($color1, $color2) {
+  background: linear-gradient(to bottom, $color1 0, $color2 100%);
+}
+
+/**
+ * CLEARFIX
+ */
+@mixin clearfix {
+  display: flow-root;
+}
+
+/**
+ * SVG
+ */
+@mixin mask-image($a) {
+  mask-image: url("#{$directory-image}/#{$a}");
+}
+
+/**
+ * Génération des colonnes
+ */
+@mixin make-columns(
+  $columns: $grid-columns,
+  $gutter: $grid-gutter-width,
+  $breakpoints: $grid
+) {
+  @for $column from 1 through $columns {
+    .col-#{$column} {
+      width: calc($column / $columns * 100%);
+    }
+  }
+  @each $size, $breakpoint in $breakpoints {
+    @media (min-width: $breakpoint) {
+      @for $column from 1 through $columns {
+        .col-#{$size}-#{$column} {
+          width: calc($column / $columns * 100%);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Génère une classe utilitaire avec ses suffixes responsive (issue de 1_settings/breakpoints)
+ * @mixin
+ * @param {string} $className - Le nom de la classe
+ * @param {string} $property - La propriété CSS (exemple: "text-align")
+ * @param {string} $property - La valeur de la propriété CSS entière (exemple: "right")
+ *
+ * @example
+ * .u-text-right {
+       text-align: right;
+
+        &\@xs {
+            @media (min-width: $smallmobile) {
+                text-align: right;
+            }
+        }
+        [...]
+    }
+ */
+@mixin responsive-utility($className, $propertyName, $propertyValue) {
+  .#{$className} {
+    #{$propertyName}: #{$propertyValue};
+
+    @each $size-shortname, $breakpoint in $grid {
+      &\@#{$size-shortname} {
+        @media (min-width: $breakpoint) {
+          #{$propertyName}: #{$propertyValue};
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Taille d'un element en cercle
+ */
+@mixin circle($size) {
+  border-radius: 50%;
+  width: $size;
+  height: $size;
+}
+
+/**
+ * 3 tailles de box shadow par défaut (large, medium & small)
+ */
+@mixin box-shadow($size) {
+  @if $size == lg {
+    box-shadow: 0 0 40px -20px rgb(0 0 0 / 50%);
+  } @else if $size == md {
+    box-shadow: 0 0 30px -15px rgb(0 0 0 / 50%);
+  } @else if $size == sm {
+    box-shadow: 0 0 20px -10px rgb(0 0 0 / 50%);
+  } @else {
+    @error "Unknown size '#{$size}'. Please use either lg, md or sm.";
+  }
+}
+
+/**
+ * Scrollbar style
+ */
+@mixin scrollbar-width-thin($thumb-color: #cdcdcd, $track-color: #f0f0f0) {
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: $thumb-color $track-color;
+  scroll-behavior: smooth;
+  scroll-padding: 0;
+
+  // Chrome
+  &::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $thumb-color;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $track-color;
+  }
+}
+
+@mixin scrollbar-hide-handheld() {
+  @media (hover: none) {
+    scrollbar-width: none;
+    scroll-snap-type: none;
+  }
+}
+
+/**
+ * Font icon
+ */
+@mixin font-icon($content) {
+  text-transform: none;
+  line-height: 1;
+  font-family: $font-family-icons;
+  font-weight: normal;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-variant: normal;
+  font-style: normal;
+  content: $content;
+  speak: never;
+}
+
+/**
+ * Assistive technology only (sr-only)
+ */
+@mixin visually-hidden() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+}
+
+/*
+ * Calcul la taille d'une colonne dans un contexte CSS Gap
+ * Permet d'avoir la taille exact d'une colonne séparée par la gouttière spécifiée.
+ * @param  {$nbCols}   int      Nombre de colonnes
+ * @param  {$gutter}   int      Gouttière (En px)
+ */
+@mixin columnizer($nbCols, $gutter) {
+  width: calc(
+    (100% / #{$nbCols}) - ((#{$nbCols} - 1) / #{$nbCols}) * #{$gutter}
+  );
+}
+
+// =============================================================================
+// TEXT SIZE MIXINS - XXS
+// =============================================================================
+
+@mixin text-xxs {
+  font-size: $font-size-xxs;
+  line-height: $line-height-text;
+}
+
+@mixin text-xxs-bold {
+  font-size: $font-size-xxs;
+  font-weight: 700;
+  line-height: $line-height-text;
+}
+
+// =============================================================================
+// TEXT SIZE MIXINS - XS
+// =============================================================================
+
+@mixin text-xs {
+  font-size: $font-size-xs;
+  line-height: $line-height-text;
+}
+
+@mixin text-xs-bold {
+  font-size: $font-size-xs;
+  font-weight: 700;
+  line-height: $line-height-text;
+}
+
+// =============================================================================
+// TEXT SIZE MIXINS - SM
+// =============================================================================
+
+@mixin text-sm {
+  font-size: $font-size-sm;
+  line-height: $line-height-text;
+}
+
+@mixin text-sm-bold {
+  font-size: $font-size-sm;
+  font-weight: 700;
+  line-height: $line-height-text;
+}
+
+// =============================================================================
+// TEXT SIZE MIXINS - MD
+// =============================================================================
+
+@mixin text-md {
+  font-size: $font-size-md;
+  line-height: $line-height-text;
+}
+
+@mixin text-md-bold {
+  font-size: $font-size-md;
+  font-weight: 700;
+  line-height: $line-height-text;
+}
+
+// =============================================================================
+// TEXT SIZE MIXINS - LG
+// =============================================================================
+
+@mixin text-lg {
+  font-size: $font-size-lg;
+  line-height: $line-height-text;
+}
+
+@mixin text-lg-bold {
+  font-size: $font-size-lg;
+  font-weight: 700;
+  line-height: $line-height-text;
+}
+
+// =============================================================================
+// SUBTITLE SIZE MIXINS
+// =============================================================================
+
+@mixin subtitle-sm {
+  font-size: $font-size-sm-subtitle;
+  line-height: $line-height-text;
+}
+
+@mixin subtitle-lg {
+  font-size: $font-size-lg-subtitle;
+  line-height: $line-height-text;
+}
+
+// =============================================================================
+// TITLE SIZE MIXINS
+// =============================================================================
+
+@mixin title-md {
+  font-size: $font-size-md-title;
+  line-height: $line-height-title;
+}
