@@ -1,0 +1,35 @@
+@use '../1_settings/var' as *;
+
+// =============================================================================
+// Tables
+// =============================================================================
+$table-header-bg: $color-default;
+$table-header-fg: $color-light;
+$table-border-color: $color-gray-5;
+
+.table {
+    margin-bottom: $spacer-5;
+    width: 100%;
+
+    &--bordered {
+        border: .1rem solid $table-border-color;
+
+        th, td {
+            border: .1rem solid $table-border-color;
+        }
+    }
+
+    th, td {
+        padding: 1rem;
+    }
+
+    thead th {
+        background: $table-header-bg;
+        color: $table-header-fg;
+        font-weight: 700;
+    }
+
+    &--centered {
+        text-align: center;
+    }
+}

@@ -1,0 +1,18 @@
+@use "../1_settings/var" as *;
+
+// =============================================================================
+// BUTTON
+// =============================================================================
+// Utilisation simple : <button class="o-button">Mon bouton</button>
+// Avec icône : <button class="o-button"><i class="o-icon o-icon--cible" aria-hidden="true"></i>Mon bouton</button>
+
+.o-button {
+  display: inline-flex;
+  border: 1.5px solid $color-primary;
+  border-radius: $radius-sm;
+  background-color: $color-light;
+  padding: $spacer-4 $spacer-5;
+  line-height: 1em;
+  font-family: $font-family-body;
+  font-size: 1.6rem;
+}

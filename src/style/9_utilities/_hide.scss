@@ -1,0 +1,128 @@
+@use '../1_settings/var' as *;
+@use '../2_tools/tools' as *;
+
+// =============================================================================
+// HIDE
+// =============================================================================
+
+// Cache un élément à partir d'un point de rupture
+.u-hidden {
+    display: none;
+
+    &\@xs {
+        @media (min-width: $smallmobile) {
+            display: none;
+        }
+    }
+
+    &\@sm {
+        @media (min-width: $mobile) {
+            display: none;
+        }
+    }
+
+    &\@md {
+        @media (min-width: $tablet) {
+            display: none;
+        }
+    }
+
+    &\@lg {
+        @media (min-width: $desktop) {
+            display: none;
+        }
+    }
+}
+
+// Affiche un élément à partir d'un point de rupture
+.u-visible {
+    &\@xs {
+        @media (max-width: $smallmobile - 1) {
+            display: none;
+        }
+    }
+
+    &\@sm {
+        @media (max-width: $mobile - 1) {
+            display: none;
+        }
+    }
+
+    &\@md {
+        @media (max-width: $tablet - 1) {
+            display: none;
+        }
+    }
+
+    &\@lg {
+        @media (max-width: $desktop - 1) {
+            display: none;
+        }
+    }
+}
+
+.u-hidden-important {
+    display: none !important;
+
+    &\@xs {
+        @media (min-width: $smallmobile) {
+            display: none !important;
+        }
+    }
+
+    &\@sm {
+        @media (min-width: $mobile) {
+            display: none !important;
+        }
+    }
+
+    &\@md {
+        @media (min-width: $tablet) {
+            display: none !important;
+        }
+    }
+
+    &\@lg {
+        @media (min-width: $desktop) {
+            display: none !important;
+        }
+    }
+}
+
+.u-visuallyhidden {
+    &:not(:focus, :active) {
+        @include visually-hidden;
+    }
+
+    &\@xs {
+        @media (max-width: $smallmobile - 1) {
+            &:not(:focus, :active) {
+                @include visually-hidden;
+            }
+        }
+    }
+
+    &\@sm {
+        @media (max-width: $mobile - 1) {
+            &:not(:focus, :active) {
+                @include visually-hidden;
+            }
+        }
+    }
+
+    &\@md {
+        @media (max-width: $tablet - 1) {
+            &:not(:focus, :active) {
+                @include visually-hidden;
+            }
+        }
+    }
+
+    &\@lg {
+        @media (max-width: $desktop - 1) {
+            &:not(:focus, :active) {
+                @include visually-hidden;
+            }
+        }
+    }
+}

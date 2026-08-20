@@ -1,0 +1,90 @@
+@use '../1_settings/var' as *;
+
+// =============================================================================
+// CONTAINER
+// =============================================================================
+
+.container-fluid {
+    padding-right: calc($grid-gutter-width / 2);
+    padding-left: calc($grid-gutter-width / 2);
+    width: 100%;
+
+    :where(.container) {
+        padding: 0;
+    }
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: calc($grid-gutter-width / 2);
+    padding-left: calc($grid-gutter-width / 2);
+    width: 100%;
+    max-width: $desktop;
+
+    :where(.container) {
+        padding: 0;
+    }
+}
+
+// Full bleed layout : https://blog.logrocket.com/full-bleed-layout-css-grid/#:~:text=To%20create%20a%20full%2Dbleed%20layout%20using%20CSS%20grid%2C%20we,span%20across%20all%20three%20columns.
+// Gestion du colonnage
+$column: calc($breakpoint-large / $grid-columns) - $grid-gutter-width;
+$min-column: calc($tablet / $grid-columns) - calc($grid-gutter-width * 2);
+
+// Conteneur des pages interne
+.container-grid {
+    display: grid;
+    grid-template-columns: 1fr repeat($grid-columns, minmax($min-column, $column)) 1fr;
+    gap: 0 $grid-gutter-width;
+    width: 100%;
+
+    > * {
+        display: block;
+        grid-column: 3 / 13;
+    }
+
+    // 100% de l'écran a l'interieur de la grille
+    .full-bleed {
+        grid-column: 1 / 15;
+        width: 100%;
+    }
+
+    :where(.container) {
+        padding: 0;
+    }
+
+    // suppresion affichage grille sous la version tablet(md)
+    @media (max-width: $tablet - 1) {
+        display: flex;
+        flex-direction: column;
+
+        > :not(.full-bleed) {
+            padding-inline: calc($grid-gutter-width / 2);
+        }
+    }
+}
+
+.has-column-left {
+    .container-grid__left {
+        grid-row: 1 / 100;
+        grid-column: 3 / 6;
+    }
+
+    > * {
+        display: block;
+        grid-column: 6 / 13;
+    }
+}
+
+.has-column-right {
+    .container-grid__right {
+        grid-row: 1 / 100;
+        grid-column: 10 / 13;
+    }
+
+    > * {
+        display: block;
+        grid-column: 3 / 10;
+    }
+}

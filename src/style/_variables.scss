@@ -1,0 +1,287 @@
+@use '1_settings/var' as *;
+
+// =============================================================================
+// BUTTONS OVERRIDES
+// =============================================================================
+// default
+$c-button-font-size: 1.6rem;
+$c-button-letter-spacing: 0.04rem;
+$c-button-padding-block: $spacer-4;
+$c-button-padding-inline: $spacer-5;
+$c-button-column-gap: $spacer-2;
+$c-button-icon-size: 4.8rem;
+$c-button-icon-font-size: 1.6rem;
+$c-button-color: $color-light;
+$c-button-bg-color: $color-default;
+$c-button-hover-bg-color: $color-primary-dark;
+$c-button-outline-color: $color-default;
+
+// small
+$c-button-sm-font-size: 1.2rem;
+$c-button-sm-letter-spacing: 0.03rem;
+$c-button-sm-padding-block: $spacer-2;
+$c-button-sm-padding-inline: $spacer-4;
+$c-button-sm-column-gap: $spacer-1;
+$c-button-sm-icon-size: 3.1rem;
+$c-button-sm-icon-font-size: 1.5rem;
+
+// large
+$c-button-lg-font-size: 1.8rem;
+$c-button-lg-letter-spacing: 0.045rem;
+$c-button-lg-padding-block: $spacer-5;
+$c-button-lg-padding-inline: $spacer-6;
+$c-button-lg-column-gap: $spacer-3;
+$c-button-lg-icon-size: 6.8rem;
+$c-button-lg-icon-font-size: 2rem;
+
+// secondary
+$c-button-secondary-color: $color-default;
+$c-button-secondary-bg-color: $color-light;
+
+// light
+$c-button-light-color: $color-dark;
+$c-button-light-bg-color: $color-light;
+$c-button-light-hover-color: $c-button-light-color;
+$c-button-light-hover-bg-color: $color-primary-light;
+
+// =============================================================================
+// LINKS OVERRIDES
+// =============================================================================
+// default
+$o-link-color: $color-gray-2;
+$o-link-border-color: $color-gray-1;
+$o-link-hover-color: $color-primary-dark;
+$o-link-hover-border-color: currentcolor;
+
+// =============================================================================
+// SKIP LINKS OVERRIDES
+// =============================================================================
+$c-skip-links-padding-y: $spacer-3;
+$c-skip-links-bgd-color: $color-gray-1;
+$c-skip-links-translate-y: -60px;
+$c-skip-links-color: $color-light;
+$c-skip-links-hover-color: $color-primary;
+
+// =============================================================================
+// BACK TO TOP OVERRIDES
+// =============================================================================
+$c-back-to-top-color: $color-default;
+$c-back-to-top-bgd-color: $color-light;
+$c-back-to-top-border-color: $color-default;
+$c-back-to-top-hover-color: $color-light;
+$c-back-to-top-hover-bgd-color: $color-primary-dark;
+$c-back-to-top-hover-border-color: $color-primary-dark;
+
+// =============================================================================
+// LIST OVERRIDES
+// =============================================================================
+$c-list-marker-color: currentcolor;
+
+// =============================================================================
+// BREADCRUMB OVERRIDES
+// =============================================================================
+$c-breadcrumb-separator: "/";
+$c-breadcrumb-spacing: 4px;
+
+// =============================================================================
+// FLASH INFO OVERRIDES
+// =============================================================================
+$c-flash-info-color: $color-light;
+$c-flash-info-bgd-color: $color-gray-1;
+
+// =============================================================================
+// ACCORDION OVERRIDES
+// =============================================================================
+// heading - button
+$c-accordion-btn-font-family: $font-family-heading;
+$c-accordion-btn-font-size: 2.2rem;
+$c-accordion-btn-color: $color-light;
+$c-accordion-btn-bgd: $color-default;
+$c-accordion-btn-icon: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.20005 10.113L7.99589 14.8002L12.8 10.113M8.0042 14.8002V1.2002' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+$c-accordion-btn-padding-y: $spacer-4;
+$c-accordion-btn-padding-x: $spacer-5;
+
+// body - panel content
+$c-accordion-panel-font-family: inherit;
+$c-accordion-panel-font-size: 1.7rem;
+$c-accordion-panel-color: $color-gray-2;
+$c-accordion-panel-border-color: $color-gray-5;
+$c-accordion-panel-padding-y: $spacer-5;
+$c-accordion-panel-padding-x: $spacer-5;
+
+// =============================================================================
+// TABS OVERRIDES
+// =============================================================================
+// heading - button
+$c-tabs-btn-font-family: $font-family-heading;
+$c-tabs-btn-font-size: 1.7rem;
+$c-tabs-btn-color: $color-light;
+$c-tabs-btn-bgd: $color-default;
+$c-tabs-btn-border-color: $color-gray-5;
+$c-tabs-btn-padding-y: $spacer-3;
+$c-tabs-btn-padding-x: $spacer-4;
+$c-tabs-btn-active-color: $color-light;
+$c-tabs-btn-active-bgd: $color-primary-dark;
+
+// body - panel content
+$c-tabs-panel-font-family: inherit;
+$c-tabs-panel-font-size: 1.7rem;
+$c-tabs-panel-color: $color-gray-2;
+$c-tabs-panel-border-color: $color-gray-5;
+$c-tabs-panel-padding-y: $spacer-5;
+$c-tabs-panel-padding-x: $spacer-5;
+$c-tabs-panel-min-height: auto;
+$c-tabs-panel-max-height: none;
+
+// =============================================================================
+// PAGER OVERRIDES
+// =============================================================================
+$c-pager-font-size: 1.7rem;
+$c-pager-item-spacing: 12px;
+$c-pager-item-width: 42px;
+$c-pager-item-height: 42px;
+$c-pager-link-color: $color-default;
+$c-pager-link-bgd-color: $color-light;
+$c-pager-link-border-color: $color-gray-3;
+$c-pager-link-border-radius: $radius-sm;
+$c-pager-icon-font-size: 1.6rem;
+$c-pager-link-hover-color: $color-light;
+$c-pager-link-hover-bgd-color: $color-primary-dark;
+
+// =============================================================================
+// FORM OVERRIDES
+// =============================================================================
+$c-form-color: $color-gray-2;
+$c-form-placeholder-color: $color-gray-3;
+$c-form-label-font-weight: 700;
+$c-form-item-height: 50px;
+$c-form-item-font-size: 1.7rem;
+$c-form-item-font-weight: 400;
+$c-form-item-font-color: $color-gray-3;
+$c-form-item-bgd-color: $color-light;
+$c-form-item-border-color: $color-gray-4;
+$c-form-item-disabled-color: $color-gray-3;
+$c-form-item-disabled-bgd-color: $color-gray-5;
+$c-form-alert-font-size: 1.5rem;
+$c-form-alert-icon-size: 42px;
+$c-form-alert-icon-font-size: 1.7rem;
+$c-form-alert-info-color: $color-gray-1;
+$c-form-alert-info-bgd-color: #B6DCFF;
+$c-form-select-icon: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 12.641L9.9948 18.5L16 12.641M10.0052 18.5V1.5' stroke='%23008383' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+$c-form-select-icon-dark: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 12.641L9.9948 18.5L16 12.641M10.0052 18.5V1.5' stroke='%2300DCCF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+$c-form-date-icon: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 7.18607H18M5.57263 2V5.06042M14.4274 2V5.06042M4.04341 3.46619H15.9566C17.0851 3.46619 18 4.34334 18 5.42537V16.0408C18 17.1228 17.0851 18 15.9566 18H4.04341C2.91486 18 2 17.1228 2 16.0408V5.42537C2 4.34334 2.91486 3.46619 4.04341 3.46619Z' stroke='%23008383' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+$c-form-date-icon-dark: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 7.18607H18M5.57263 2V5.06042M14.4274 2V5.06042M4.04341 3.46619H15.9566C17.0851 3.46619 18 4.34334 18 5.42537V16.0408C18 17.1228 17.0851 18 15.9566 18H4.04341C2.91486 18 2 17.1228 2 16.0408V5.42537C2 4.34334 2.91486 3.46619 4.04341 3.46619Z' stroke='%2300DCCF' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+$c-form-check-size: 14px;
+$c-form-check-border-color: $color-gray-2;
+$c-form-check-bgd-color: $color-light;
+$c-form-checked-inner-size: 8px;
+$c-form-checked-border-color: $color-primary-dark;
+$c-form-checked-bgd-color: $color-primary-dark;
+$c-form-actions-height: 48px;
+$c-form-actions-search-icon: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.20039 10.8L2.40039 13.6M13.6001 7.06666C13.6001 9.64399 11.5107 11.7333 8.93342 11.7333C6.35609 11.7333 4.26675 9.64399 4.26675 7.06666C4.26675 4.48933 6.35609 2.39999 8.93342 2.39999C11.5107 2.39999 13.6001 4.48933 13.6001 7.06666Z' stroke='white' stroke-width='1.25' stroke-miterlimit='10' stroke-linecap='round'/%3E%3C/svg%3E");
+
+// =============================================================================
+// FORM OVERLAP (SEARCH) OVERRIDES
+// =============================================================================
+$c-form-overlap-height: 74px;
+$c-form-overlap-border-color: $c-form-item-border-color;
+$c-form-overlap-item-color: $color-dark;
+$c-form-overlap-action-font-size: 2rem;
+$c-form-overlap-action-color: $color-primary-dark;
+$c-form-overlap-action-hover-color: $color-light;
+$c-form-overlap-action-hover-bgd-color: $c-form-overlap-action-color;
+
+// =============================================================================
+// TOOLTIP OVERRIDES
+// =============================================================================
+// tooltip button
+$c-tooltip-btn-size: 42px;
+$c-tooltip-btn-color: #fff;
+$c-tooltip-btn-bgd-color: #008383;
+$c-tooltip-btn-font-size: 1.7rem;
+$c-tooltip-btn-font-weight: 700;
+
+// tooltip description
+$c-tooltip-desc-spacer: 2px; // space between the button and the arrow
+$c-tooltip-desc-padding-y: .5em;
+$c-tooltip-desc-padding-x: 1em;
+$c-tooltip-desc-color: $color-light;
+$c-tooltip-desc-bgd-color: $color-dark;
+$c-tooltip-desc-arrow-size: .5em;
+
+// =============================================================================
+// ALERT OVERRIDES
+// =============================================================================
+$c-alert-padding-y: $spacer-5;
+$c-alert-padding-x: $spacer-7;
+$c-alert-font-size: 1.7rem;
+$c-alert-font-size-mobile: 1.5rem;
+$c-alert-color: $color-white;
+$c-alert-title-font-size: 4.6rem;
+$c-alert-title-font-size-mobile: 2.2rem;
+$c-alert-title-spacing: $spacer-5;
+$c-alert-description-spacing: $spacer-3;
+
+// =============================================================================
+// TABLE OVERRIDES
+// =============================================================================
+$c-table-header-bgd-color: $color-default;
+$c-table-header-color: $color-light;
+$c-table-border-color: $color-gray-6;
+$c-table-cell-border-color: $color-light;
+$c-table-strip-color: $color-gray-6;
+
+// =============================================================================
+// QUOTE OVERRIDES
+// =============================================================================
+$c-quote-font-size: 2.6rem;
+$c-quote-font-size-mobile: 2rem;
+$c-quote-author-font-size: 1.2rem;
+$c-quote-color: $color-dark;
+$c-quote-icon: url("data:image/svg+xml,%3Csvg width='52' height='46' viewBox='0 0 52 46' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.5' d='M15.3333 6C19.4 6 23.3001 7.61549 26.1756 10.491C29.0512 13.3666 30.6667 17.2667 30.6667 21.3333C30.6667 25.4 29.0512 29.3001 26.1756 32.1757C23.3001 35.0513 19.4 36.6667 15.3333 36.6667V46C3.09333 37.6 0 30.5467 0 21.3333C0 17.2667 1.61541 13.3666 4.49097 10.491C7.36652 7.61549 11.2667 6 15.3333 6Z' fill='%23A5A5A5'/%3E%3Cpath d='M36.6667 6C40.7333 6 44.6334 7.61549 47.5089 10.491C50.3845 13.3666 52 17.2667 52 21.3333C52 25.4 50.3845 29.3001 47.5089 32.1757C44.6334 35.0513 40.7333 36.6667 36.6667 36.6667V46C24.4267 37.6 21.3333 30.5467 21.3333 21.3333C21.3333 17.2667 22.9487 13.3666 25.8243 10.491C28.6999 7.61549 32.6 6 36.6667 6Z' fill='%23666666'/%3E%3C/svg%3E%0A");
+$c-quote-icon-dark: url("data:image/svg+xml,%3Csvg width='52' height='46' viewBox='0 0 52 46' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.5' d='M15.3333 6C19.4 6 23.3001 7.61549 26.1756 10.491C29.0512 13.3666 30.6667 17.2667 30.6667 21.3333C30.6667 25.4 29.0512 29.3001 26.1756 32.1757C23.3001 35.0513 19.4 36.6667 15.3333 36.6667V46C3.09333 37.6 0 30.5467 0 21.3333C0 17.2667 1.61541 13.3666 4.49097 10.491C7.36652 7.61549 11.2667 6 15.3333 6Z' fill='%23A5A5A5'/%3E%3Cpath d='M36.6666 6C40.7333 6 44.6334 7.61549 47.5089 10.491C50.3845 13.3666 52 17.2667 52 21.3333C52 25.4 50.3845 29.3001 47.5089 32.1757C44.6334 35.0513 40.7333 36.6667 36.6666 36.6667V46C24.4266 37.6 21.3333 30.5467 21.3333 21.3333C21.3333 17.2667 22.9487 13.3666 25.8243 10.491C28.6998 7.61549 32.6 6 36.6666 6Z' fill='%23CCCCCC'/%3E%3C/svg%3E");
+
+// =============================================================================
+// MODAL OVERRIDES
+// =============================================================================
+$c-modal-backdrop-color: $color-gray-1;
+$c-modal-backdrop-opacity: 0.8;
+
+// dialog
+$c-modal-dialog-padding-y: $spacer-6;
+$c-modal-dialog-padding-x: $spacer-5;
+$c-modal-dialog-bgd-color: $color-white;
+$c-modal-dialog-border-radius: $radius-sm;
+$c-modal-dialog-width-sm: 300px;
+$c-modal-dialog-width-md: 600px;
+$c-modal-dialog-width-lg: 900px;
+
+// content
+$c-modal-header-color: $color-fail;
+$c-modal-body-color: $color-gray-2;
+$c-modal-close-btn-color: $color-gray-2;
+
+// =============================================================================
+// VIDEO OVERRIDES
+// =============================================================================
+$c-video-y-spacing: $spacer-3;
+$c-video-button-bg-color: $color-light;
+$c-video-button-fg-color: #fff;
+$c-video-button-font-size: 8.4rem;
+$c-video-media-border-radius: $radius-md;
+$c-video-media-aspect-ratio: #{16 / 9};
+
+// =============================================================================
+// FIGURE OVERRIDES
+// =============================================================================
+$c-figure-y-spacing: $spacer-2;
+$c-figure-bg-color: $color-light;
+$c-figure-border-radius: $radius-md;
+$c-figure-aspect-ratio: #{16 / 9};
+
+// caption
+$c-figure-caption-spacing: $spacer-6;
+$c-figure-caption-font-size: 1.2rem;
+$c-figure-caption-font-weight: 400;
+$c-figure-caption-line-height: 1.5;
+$c-figure-caption-color: $color-gray-2;
