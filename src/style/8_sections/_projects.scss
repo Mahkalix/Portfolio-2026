@@ -1,0 +1,82 @@
+@use "../1_settings/var" as *;
+
+.p-projects {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(48px, 7vw, 100px);
+  padding: 40px var(--portfolio-page-padding) 80px;
+  color: var(--portfolio-text);
+
+  &__header {
+    display: grid;
+    gap: 24px;
+    max-width: 1100px;
+  }
+
+  h1 {
+    margin: 0;
+    color: inherit;
+    font-family: $font-family-heading;
+    font-size: clamp(9rem, 17vw, 24rem);
+    line-height: .72;
+    text-transform: uppercase;
+  }
+
+  &__header > p {
+    margin: 0;
+    max-width: 760px;
+    font-size: clamp(2rem, 2.2vw, 2.8rem);
+    line-height: 1.5;
+  }
+
+  &__design-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+}
+
+.p-photography {
+  &__camera {
+    color: var(--portfolio-accent);
+    font-size: clamp(1.6rem, 1.5vw, 2rem) !important;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__gallery {
+    column-count: 1;
+    column-gap: 0;
+    line-height: 0;
+  }
+
+  &__gallery figure {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    break-inside: avoid-column;
+    border-radius: 0;
+    overflow: hidden;
+    vertical-align: top;
+  }
+
+  &__gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: filter var(--portfolio-transition);
+  }
+
+  &__gallery figure:hover img { filter: saturate(1.08); }
+}
+
+@media (min-width: $mobile) {
+  .p-projects__design-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .p-photography__gallery { column-count: 2; }
+}
+
+@media (min-width: $tablet) {
+  .p-projects__design-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .p-photography__gallery { column-count: 3; }
+}

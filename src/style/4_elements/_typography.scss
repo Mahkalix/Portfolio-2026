@@ -1,0 +1,19 @@
+@use '../1_settings/var' as *;
+
+// =============================================================================
+// TYPOGRAPHY
+// =============================================================================
+
+p {
+    margin: 0 0 $spacer-5;
+    line-height: $line-height-base;
+}
+
+blockquote {
+    font-style: italic;
+    margin: 0;
+}
+
+q {
+    font-style: italic;
+}

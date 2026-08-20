@@ -1,0 +1,38 @@
+@use '../1_settings/var' as *;
+
+/* ===================================================================
+ * FONTS
+ * ================================================================= */
+
+/*
+ *   => $family: font name
+ *   => $police: font file.
+ *   => $font-weight: (normal, 600...)
+ *   => $font-style: (normal, italic...)
+ *   Example :
+ *   @font-face {
+ *       @include font-face('ExampleFont', 'ExampleFont-webfont', 400);
+ *   }
+ *
+ *   Pour une police d'icône, la 'font-display' doit être à 'block' :
+ *   @font-face {
+ *       @include font-face('IconFont', 'path-to-icon-font', 400, block);
+ *   }
+ */
+@mixin font-face(
+    $family,
+    $police,
+    $font-weight: normal,
+    $font-display: swap,
+    $font-style: normal
+) {
+    font-family: $family;
+    src: url('#{$directory-font}/#{$police}.woff2') format('woff2');
+    font-weight: $font-weight;
+    font-display: $font-display;
+    font-style: $font-style;
+}
+
+// Manrope is bundled from @fontsource-variable/manrope in src/main.jsx.
+// Mango Grotesque is used when installed locally and falls back to a condensed
+// display stack defined in 1_settings/_fonts.scss.

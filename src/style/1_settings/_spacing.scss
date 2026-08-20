@@ -1,0 +1,65 @@
+// =============================================================================
+// ESPACEMENTS
+// =============================================================================
+// Cf. Règles d'incrémentation et espacement de la maquette (système “8 point grid” par défaut)
+// Les chiffres sont des multiples de 8 hormis pour le 4px et le 12px qui sont utilisé pour les petits éléments
+@use "sass:map";
+
+$spacer-base: var(--spacer);
+$spacer-0: calc($spacer-base * 0); // 0
+$spacer-1: calc($spacer-base * 0.5); // 4px
+$spacer-2: calc($spacer-base); // 8px
+$spacer-3: calc($spacer-base * 1.5); // 12px
+$spacer-4: calc($spacer-base * 2); // 16px
+$spacer-5: calc($spacer-base * 3); // 24px
+$spacer-6: calc($spacer-base * 4); // 32px
+$spacer-7: calc($spacer-base * 5); // 40px
+$spacer-8: calc($spacer-base * 6); // 48px
+
+// Les espacements se font de 16 en 16 à partir de là
+$spacer-9: calc($spacer-base * 8); // 64px
+$spacer-10: calc($spacer-base * 10); // 80px
+$spacer-11: calc($spacer-base * 12); // 96px
+$spacer-12: calc($spacer-base * 14); // 112px
+$spacer-13: calc($spacer-base * 16); // 128px
+$spacer-14: calc($spacer-base * 18); // 144px
+
+// Stockage des variables pour créer les boucles dans 9_utilities/_spacing.scss
+$spacers: $spacer-0,
+    $spacer-1,
+    $spacer-2,
+    $spacer-3,
+    $spacer-4,
+    $spacer-5,
+    $spacer-6,
+    $spacer-7,
+    $spacer-8,
+    $spacer-9,
+    $spacer-10,
+    $spacer-11,
+    $spacer-12,
+    $spacer-13,
+    $spacer-14;
+
+// Abstraction de la nomenclature des margins et paddings
+$margin-shortnames: (
+    'm': 'margin',
+    'mt': 'margin-block-start',
+    'ml': 'margin-inline-start',
+    'mr': 'margin-inline-end',
+    'mb': 'margin-block-end',
+    'mx': 'margin-inline',
+    'my': 'margin-block',
+);
+$padding-shortnames: (
+    'p': 'padding',
+    'pt': 'padding-block-start',
+    'pl': 'padding-inline-start',
+    'pr': 'padding-inline-end',
+    'pb': 'padding-block-end',
+    'px': 'padding-inline',
+    'py': 'padding-block',
+);
+
+// Fusion des tableaux précédent
+$spacer-shortnames: map.merge($margin-shortnames, $padding-shortnames);

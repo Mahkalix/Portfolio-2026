@@ -1,0 +1,22 @@
+// =============================================================================
+// BREAKPOINTS
+// =============================================================================
+@use "sass:map";
+
+$breakpoint-tiny: 576px !default;
+$breakpoint-small: 792px !default;
+$breakpoint-medium: 1024px !default;
+$breakpoint-large: 1280px !default;
+$breakpoint-huge: 1600px !default;
+$grid: (
+    'xs': $breakpoint-tiny,
+    'sm': $breakpoint-small,
+    'md': $breakpoint-medium,
+    'lg': $breakpoint-large,
+    'xl': $breakpoint-huge
+);
+$smallmobile: map.get($grid, 'xs');
+$mobile: map.get($grid, 'sm');
+$tablet: map.get($grid, 'md');
+$desktop: map.get($grid, 'lg');
+$wide: map.get($grid, 'xl');

@@ -1,0 +1,56 @@
+@use '../1_settings/var' as *;
+
+// =============================================================================
+// TAGS
+// =============================================================================
+// Utilisation dans le HTML :
+// <ul class="o-tags">
+//   <li class="o-tag__item">Catégorie</li>
+//   <li class="o-tag__item o-tags__item--outline">Type de page</li>
+// </ul>
+
+.o-tags {
+    display: inline-flex;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: $spacer-2;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &__item {
+        border-radius: $radius-lg;
+        background: $color-gray-2;
+        padding-block: 4px;
+        padding-inline: 8px;
+        text-transform: uppercase;
+        line-height: 1.2;
+        letter-spacing: 0.045rem;
+        color: $color-light;
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+    &__item--outline {
+        border: 1px solid $color-primary-dark;
+        background: $color-light;
+        color: $color-default;
+    }
+
+    &__item--big {
+        padding: 8px 12px;
+    }
+
+    .is-link {
+        position: relative;
+        transition: background-color .2s ease-in-out;
+        z-index: 3;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            background-color: $color-primary-dark !important;
+            text-decoration: none;
+        }
+    }
+}

@@ -1,0 +1,34 @@
+// =============================================================================
+// TYPOGRAPHY - Font Sizes
+// =============================================================================
+
+// Base configuration
+$font-size-base: 16px !default;
+$line-height-base: 1.5 !default;
+
+// Text size scale
+$font-size-xxs: 8px;
+$font-size-xs: 16px;
+$font-size-sm: 20px;
+$font-size-md: 24px;
+$font-size-lg: 28px;
+
+// Subtitle scale
+$font-size-sm-subtitle: 52px;
+$font-size-lg-subtitle: 88px;
+
+// Title scale
+$font-size-md-title: 295px;
+
+// =============================================================================
+// TYPOGRAPHY - Line Heights
+// =============================================================================
+
+$line-height-tight: 1.2;
+$line-height-sm: 1.4;
+$line-height-md: 1.5;
+$line-height-relaxed: 1.6;
+
+// Specific line-heights for typography
+$line-height-title: 1.4;
+$line-height-text: 1.5;

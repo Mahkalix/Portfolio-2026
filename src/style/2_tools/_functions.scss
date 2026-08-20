@@ -1,0 +1,11 @@
+// =============================================================================
+// FUNCTIONS
+// =============================================================================
+@use "sass:string";
+
+// unicode: présèrve le code "unicode" (ex: "\e900") lors de la compilation
+// Utilisation : content: unicode('e900');
+
+@function unicode($str) {
+    @return string.unquote("\"") + string.unquote(string.insert($str, "\\", 1)) + string.unquote("\"")
+}

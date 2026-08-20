@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+/* ===================================================================
+ * PORTFOLIO
+ * ================================================================= */
+
+/**
+ * Entrée légère pour projets perso / portfolios.
+ * Garde les fondations, retire les composants métier lourds.
+ */
+
+@forward "2_tools/fonts";
+
+/* Variables CSS */
+@forward "css-variables";
+
+/* Génériques */
+@forward "3_generic/reset";
+@forward "3_generic/typography";
+
+/* Eléments de base */
+@forward "4_elements/images";
+@forward "4_elements/links";
+@forward "4_elements/page";
+@forward "4_elements/typography";
+
+/* Mise en page */
+@forward "5_layout/container";
+@forward "5_layout/grid";
+@forward "5_layout/layouts";
+
+/* Objets utiles */
+@forward "6_objects/buttons";
+@forward "6_objects/icons";
+@forward "6_objects/portfolio-buttons";
+
+/* Composants du portfolio */
+@forward "7_components/portfolio-shell";
+
+/* Sections */
+@forward "8_sections/home";
+@forward "8_sections/projects";
+@forward "8_sections/project-detail";
+@forward "8_sections/about";
+@forward "8_sections/contact";
+
+/* Utilitaires */
+@forward "9_utilities/flex";
+@forward "9_utilities/hide";
+@forward "9_utilities/spacing";
+@forward "9_utilities/typography";
+@forward "9_utilities/utilities";

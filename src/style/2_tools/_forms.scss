@@ -1,0 +1,199 @@
+@use '../1_settings/var' as *;
+@use '../variables' as *;
+
+/* ===================================================================
+ * FORMS
+ * ================================================================= */
+
+/*
+ *  Placeholder :
+ *  A utiliser sur une champ input, ex: "c-form__item"
+ *  => $color:          couleur du texte
+ *  => $fontWeight:     poids de la police
+ */
+@mixin placeholder(
+    $color: $color-gray-3,
+    $fontWeight: 400
+) {
+    &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        opacity: 1; /* Firefox */
+        color: $color;
+        font-weight: $fontWeight;
+    }
+}
+
+/*
+ *   Checkbox :
+ *   => $checkboxMarginTop:         alignement de la case avec le libellé
+ *   => $checkboxSize:              largeur et hauteur de la case
+ *   => $checkboxBorderColor:       couleur de bordure de la case
+ *   => $checkboxBgColor:           couleur de fond de la case
+ *   => $checkboxInnerSize:         largeur et hauteur de la coche
+ *   => $checkboxInnerBorderColor:  couleur de bordure de la case coché
+ *   => $checkboxInnerBgColor:      couleur de fond de la case coché
+ *   => $checkboxDisabledColor:     couleur de désactivé de la case
+ */
+@mixin checkbox(
+    $checkboxMarginTop: 2px,
+    $checkboxSize: $c-form-check-size,
+    $checkboxBorderColor: $c-form-check-border-color,
+    $checkboxBgColor: $c-form-check-bgd-color,
+    $checkboxInnerSize: $c-form-checked-inner-size,
+    $checkboxInnerBorderColor: $c-form-checked-border-color,
+    $checkboxInnerBgColor: $c-form-checked-bgd-color,
+    $checkboxDisabledColor: $c-form-item-disabled-color
+) {
+    appearance: none;
+    display: inline-block;
+    position: relative;
+    margin-top: $checkboxMarginTop;
+    border: 1px solid $checkboxBorderColor;
+    background: $checkboxBgColor; /* this is needed for iOS. Otherwise the background just becomes black. */
+    width: $checkboxSize;
+    height: $checkboxSize;
+
+    &::before {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        overflow: hidden;
+        content: '';
+    }
+
+    &:focus {
+        outline: 1px solid;
+        outline-offset: 1px;
+    }
+
+    &:checked {
+        border-color: $checkboxInnerBorderColor;
+
+        &::before {
+            background-color: $checkboxInnerBgColor;
+            width: $checkboxInnerSize;
+            height: $checkboxInnerSize;
+        }
+    }
+
+    &:indeterminate::before,
+    &[aria-checked="mixed"]::before {
+        border: 2px solid $checkboxInnerBgColor;
+        width: 40%;
+        height: 0;
+    }
+
+    + label {
+        flex: 1;
+    }
+
+    &[disabled],
+    [aria-disabled="true"] {
+        border-color: $checkboxDisabledColor;
+
+        + label {
+            color: $checkboxDisabledColor;
+        }
+    }
+}
+
+/*
+ *   Radio button :
+ *   => $radioMarginTop:        alignement du bouton radio avec le libellé
+ *   => $radioSize:             largeur et hauteur du bouton radio
+ *   => $radioBorderColor:      couleur de bordure du bouton radio
+ *   => $radioBgColor:          couleur de fond du bouton radio
+ *   => $radioInnerSize:        largeur et hauteur de la coche
+ *   => $radioInnerBorderColor: couleur de bordure du bouton radio coché
+ *   => $radioInnerBgColor:     couleur de fond du bouton radio coché
+ *   => $radioDisabledColor:    couleur de désactivé du bouton radio
+ */
+@mixin radio-button(
+    $radioMarginTop: 2px,
+    $radioSize: $c-form-check-size,
+    $radioBorderColor: $c-form-check-border-color,
+    $radioBgColor: $c-form-check-bgd-color,
+    $radioInnerSize: $c-form-checked-inner-size,
+    $radioInnerBorderColor: $c-form-checked-border-color,
+    $radioInnerBgColor: $c-form-checked-bgd-color,
+    $radioDisabledColor: $c-form-item-disabled-color
+) {
+    appearance: none;
+    display: inline-block;
+    position: relative;
+    margin-top: $radioMarginTop;
+    border: 1px solid $radioBorderColor;
+    border-radius: 50%;
+    background: $radioBgColor; /* this is needed for iOS. Otherwise the background just becomes black. */
+    width: $radioSize;
+    height: $radioSize;
+
+    &::before {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        border-radius: 50%;
+        overflow: hidden;
+        content: '';
+    }
+
+    &:focus {
+        outline: 1px solid;
+        outline-offset: 1px;
+    }
+
+    &:checked {
+        border-color: $radioInnerBorderColor;
+
+        &::before {
+            background-color: $radioInnerBgColor;
+            width: $radioInnerSize;
+            height: $radioInnerSize;
+        }
+    }
+
+    + label {
+        flex: 1;
+    }
+
+    &[disabled],
+    [aria-disabled="true"] {
+        border-color: $radioDisabledColor;
+
+        + label {
+            color: $radioDisabledColor;
+        }
+    }
+}
+
+/*
+ *   Custom select :
+ *   => $arrow:   nom du fichier image
+ *   => $taille:  width du background en pixels permettant de calculer le padding-right
+ *   => $right:   espacement de l'image par rapport au bord droit
+ */
+@mixin select-box(
+    $arrow: $c-form-select-icon,
+    $size: 20px,
+    $right: $spacer-4
+) {
+    $spacing-right: calc(5px + #{$size} + #{$right}); /* calcul l'espace nécessaire entre l'image et le texte dans le select  */
+
+    /* Safari and Chrome */
+    appearance: none;
+    background-image: $arrow;
+    background-position: calc(100% - #{$right}) center;
+    background-repeat: no-repeat;
+    padding-right: $spacing-right;
+    text-overflow: ellipsis; /* Firefox */
+
+    &::-ms-expand {
+        display: none;
+    }
+
+    &[size] {
+        background-image: none;
+        padding-right: 0;
+        height: auto;
+        vertical-align: top;
+    }
+}
