@@ -17,8 +17,8 @@
     margin: 0;
     color: inherit;
     font-family: $font-family-heading;
-    font-size: clamp(9rem, 17vw, 24rem);
-    line-height: .72;
+    font-size: clamp(4em, 17vw, 24rem);
+    line-height: 0.72;
     text-transform: uppercase;
   }
 
@@ -34,7 +34,6 @@
     grid-template-columns: 1fr;
     gap: 12px;
   }
-
 }
 
 .p-photography {
@@ -68,15 +67,28 @@
     transition: filter var(--portfolio-transition);
   }
 
-  &__gallery figure:hover img { filter: saturate(1.08); }
+  &__gallery figure:hover img {
+    filter: saturate(1.08);
+  }
 }
 
 @media (min-width: $mobile) {
-  .p-projects__design-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .p-photography__gallery { column-count: 2; }
+  .p-projects__design-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .p-photography__gallery {
+    column-count: 2;
+  }
+  .p-projects h1 {
+    font-size: clamp(9rem, 17vw, 24rem);
+  }
 }
 
 @media (min-width: $tablet) {
-  .p-projects__design-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .p-photography__gallery { column-count: 3; }
+  .p-projects__design-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .p-photography__gallery {
+    column-count: 3;
+  }
 }
