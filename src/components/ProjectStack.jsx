@@ -24,7 +24,14 @@ function ProjectStack() {
           </span>
           <span className="c-project-stack__heading">
             <span className="c-project-stack__title">{project.title}</span>
-            <span className="c-project-stack__arrow" aria-hidden="true">↗</span>
+            <svg
+              className="c-project-stack__arrow"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path d="M5 19 19 5M9 5h10v10" />
+            </svg>
           </span>
         </Link>
       ))}
