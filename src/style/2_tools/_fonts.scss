@@ -34,5 +34,5 @@
 }
 
 // Manrope is bundled from @fontsource-variable/manrope in src/main.jsx.
-// Mango Grotesque is used when installed locally and falls back to a condensed
-// display stack defined in 1_settings/_fonts.scss.
+// Mango Grotesque is self-hosted from public/assets/fonts so it renders
+// consistently on devices where the font is not installed, including iOS.

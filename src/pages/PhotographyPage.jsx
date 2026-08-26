@@ -1,20 +1,20 @@
 import { useLanguage } from "../i18n/language.js";
 
 const photographs = [
-  "/assets/photography/originals/DSCF1487.jpg",
-  "/assets/photography/originals/DSCF1485.jpg",
-  "/assets/photography/originals/DSCF1219.jpg",
-  "/assets/photography/originals/DSCF1490.jpg",
-  "/assets/photography/originals/DSCF1499.jpg",
-  "/assets/photography/originals/DSCF1550.jpg",
-  "/assets/photography/originals/DSCF1585.jpg",
-  "/assets/photography/originals/DSCF1540.jpg",
-  "/assets/photography/originals/DSCF1328.jpg",
-  "/assets/photography/originals/DSCF1515.jpg",
-  "/assets/photography/originals/DSCF1699.jpg",
-  "/assets/photography/originals/DSCF1802.jpg",
-  "/assets/photography/originals/DSCF1297.jpg",
-  "/assets/photography/originals/DSCF0970.jpg",
+  { name: "DSCF1487", width: 1280, height: 1864 },
+  { name: "DSCF1485", width: 1280, height: 1815 },
+  { name: "DSCF1219", width: 1280, height: 1920 },
+  { name: "DSCF1490", width: 1280, height: 853 },
+  { name: "DSCF1499", width: 1280, height: 1920 },
+  { name: "DSCF1550", width: 1280, height: 1920 },
+  { name: "DSCF1585", width: 1280, height: 853 },
+  { name: "DSCF1540", width: 1280, height: 1920 },
+  { name: "DSCF1328", width: 1280, height: 853 },
+  { name: "DSCF1515", width: 1280, height: 853 },
+  { name: "DSCF1699", width: 1280, height: 853 },
+  { name: "DSCF1802", width: 1280, height: 853 },
+  { name: "DSCF1297", width: 1280, height: 853 },
+  { name: "DSCF0970", width: 1280, height: 853 },
 ];
 
 function PhotographyPage() {
@@ -29,16 +29,25 @@ function PhotographyPage() {
       </header>
 
       <section className="p-photography__gallery" aria-label={copy.photography.gallery}>
-        {photographs.map((src, index) => (
-          <figure key={src}>
-            <img
-              src={src}
-              alt={copy.photography.alt[index]}
-              loading="lazy"
-              decoding="async"
-            />
-          </figure>
-        ))}
+        {photographs.map((photograph, index) => {
+          const basePath = `/assets/photography/web/${photograph.name}`;
+
+          return (
+            <figure key={photograph.name}>
+              <img
+                src={`${basePath}-1280.webp`}
+                srcSet={`${basePath}-640.webp 640w, ${basePath}-1280.webp 1280w`}
+                sizes="(min-width: 1024px) 32vw, (min-width: 792px) 50vw, calc(100vw - 40px)"
+                width={photograph.width}
+                height={photograph.height}
+                alt={copy.photography.alt[index]}
+                loading={index === 0 ? "eager" : "lazy"}
+                fetchPriority={index === 0 ? "high" : "auto"}
+                decoding="async"
+              />
+            </figure>
+          );
+        })}
       </section>
     </div>
   );
