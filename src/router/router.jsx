@@ -7,6 +7,7 @@ import ProjectDetailPage from "../pages/ProjectDetailPage.jsx";
 import ContactPage from "../pages/ContactPage.jsx";
 import PhotographyPage from "../pages/PhotographyPage.jsx";
 import NotFoundPage from "../pages/NotFoundPage.jsx";
+import MaintenancePage from "../pages/MaintenancePage.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ export const router = createBrowserRouter([
       {
         path: "contact",
         element: <ContactPage />,
+      },
+      {
+        path: "maintenance",
+        element: <MaintenancePage />,
       },
       {
         path: "*",
