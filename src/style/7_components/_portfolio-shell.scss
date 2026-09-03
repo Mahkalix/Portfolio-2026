@@ -6,6 +6,18 @@
   color: var(--portfolio-text);
 }
 
+.app-shell--maintenance {
+  #site-header,
+  #site-menu,
+  .c-site-footer {
+    display: none;
+  }
+
+  #main-content {
+    min-height: 100svh;
+  }
+}
+
 .c-skip-navigation {
   position: fixed;
   z-index: 100;
@@ -18,10 +30,12 @@
   background: var(--portfolio-bg);
   padding: 8px;
   color: var(--portfolio-text);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, .45);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
   opacity: 0;
   transform: translate(-50%, calc(-100% - 20px));
-  transition: opacity 180ms ease, transform 180ms ease;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
 
   &:focus-within {
     opacity: 1;
@@ -306,7 +320,7 @@
     margin: 0;
     font-family: $font-family-heading;
     font-size: clamp(7rem, 12vw, 16rem);
-    line-height: .8;
+    line-height: 0.8;
     text-transform: uppercase;
   }
 
