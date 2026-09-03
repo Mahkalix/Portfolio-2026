@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
 import RootLayout from "../layouts/RootLayout.jsx";
-import HomePage from "../pages/HomePage.jsx";
 import AboutPage from "../pages/AboutPage.jsx";
 import ProjectsPage from "../pages/ProjectsPage.jsx";
 import ProjectDetailPage from "../pages/ProjectDetailPage.jsx";
