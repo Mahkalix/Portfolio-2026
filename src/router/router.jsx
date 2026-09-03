@@ -1,12 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import RootLayout from "../layouts/RootLayout.jsx";
-import HomePage from "../pages/HomePage.jsx";
 import AboutPage from "../pages/AboutPage.jsx";
 import ProjectsPage from "../pages/ProjectsPage.jsx";
 import ProjectDetailPage from "../pages/ProjectDetailPage.jsx";
 import ContactPage from "../pages/ContactPage.jsx";
 import PhotographyPage from "../pages/PhotographyPage.jsx";
 import NotFoundPage from "../pages/NotFoundPage.jsx";
+import MaintenancePage from "../pages/MaintenancePage.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <HomePage />,
+        element: <MaintenancePage />,
       },
       {
         path: "about",
@@ -35,6 +35,10 @@ export const router = createBrowserRouter([
       {
         path: "contact",
         element: <ContactPage />,
+      },
+      {
+        path: "maintenance",
+        element: <MaintenancePage />,
       },
       {
         path: "*",
