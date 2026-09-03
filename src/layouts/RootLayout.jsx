@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Footer from "../components/Footer.jsx";
 import Header from "../components/Header.jsx";
 import SiteMenu from "../components/SiteMenu.jsx";
 
 function RootLayout() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { pathname } = useLocation();
+  const isMaintenancePage =
+    pathname === "/" || pathname.startsWith("/maintenance");
 
   useEffect(() => {
     function onKeyDown(event) {
@@ -18,13 +21,22 @@ function RootLayout() {
   }, [menuOpen]);
 
   return (
-    <div className="app-shell">
-      <Header menuOpen={menuOpen} onMenuToggle={() => setMenuOpen((value) => !value)} />
-      <SiteMenu open={menuOpen} onNavigate={() => setMenuOpen(false)} />
+    <div
+      className={`app-shell${isMaintenancePage ? " app-shell--maintenance" : ""}`}
+    >
+      {!isMaintenancePage && (
+        <>
+          <Header
+            menuOpen={menuOpen}
+            onMenuToggle={() => setMenuOpen((value) => !value)}
+          />
+          <SiteMenu open={menuOpen} onNavigate={() => setMenuOpen(false)} />
+        </>
+      )}
       <main id="main-content">
         <Outlet />
       </main>
-      <Footer />
+      {!isMaintenancePage && <Footer />}
     </div>
   );
 }
