@@ -2,9 +2,9 @@ import ContactSection from "../components/ContactSection.jsx";
 
 function ContactPage() {
   return (
-    <main className="p-contact">
-      <ContactSection idPrefix="contact" />
-    </main>
+    <div className="p-contact">
+      <ContactSection idPrefix="contact" headingLevel="h1" />
+    </div>
   );
 }
 

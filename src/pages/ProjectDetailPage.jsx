@@ -1,5 +1,6 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
 import Carousel from "../components/Carousel.jsx";
+import ProjectTag from "../components/ProjectTag.jsx";
 import { designProjects, findProject, specialDesignProjects, webProjects } from "../data/projects.js";
 import { localize, useLanguage } from "../i18n/language.js";
 
@@ -42,6 +43,7 @@ function ProjectDetailPage() {
 
       <header className="p-project-detail__header">
         <h1>{project.title}</h1>
+        {project.status ? <ProjectTag status>{localize(project.status, language)}</ProjectTag> : null}
         {isDesignProject ? (
           <img
             className="p-project-detail__links is-design"
@@ -49,18 +51,20 @@ function ProjectDetailPage() {
             alt=""
             aria-hidden="true"
           />
-        ) : (
+        ) : project.siteUrl || project.githubUrl ? (
           <div className="p-project-detail__links is-development">
             {project.siteUrl ? (
-              <a href={project.siteUrl} target="_blank" rel="noreferrer" aria-label={`Visit ${project.title} website`}>
+              <a href={project.siteUrl} target="_blank" rel="noreferrer" aria-label={`${copy.detail.visitSite} ${project.title} (${copy.accessibility.newWindow})`}>
                 <img src="/assets/figma/project-external-link.svg" alt="" aria-hidden="true" />
               </a>
             ) : null}
-            <a href={project.githubUrl} target="_blank" rel="noreferrer" aria-label="Visit Maxence's GitHub profile">
-              <img src="/assets/social-github.svg" alt="" aria-hidden="true" />
-            </a>
+            {project.githubUrl ? (
+              <a href={project.githubUrl} target="_blank" rel="noreferrer" aria-label={`${copy.detail.visitGithub} (${copy.accessibility.newWindow})`}>
+                <img src="/assets/social-github.svg" alt="" aria-hidden="true" />
+              </a>
+            ) : null}
           </div>
-        )}
+        ) : null}
       </header>
 
       <section className="p-project-detail__summary" aria-label={copy.detail.overview}>
@@ -74,7 +78,7 @@ function ProjectDetailPage() {
         {isDesignProject ? (
           <img className="p-project-detail__tool" src="/assets/figma/project-tool-photoshop.png" alt="Adobe Photoshop" />
         ) : project.tools ? (
-          <ul className="p-project-detail__tools" aria-label="Technologies">
+          <ul className="p-project-detail__tools" aria-label={copy.detail.technologies}>
             {Object.entries(project.tools).map(([name, icon]) => (
               <li key={name}>
                 <img src={icon} alt="" aria-hidden="true" />

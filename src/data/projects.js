@@ -91,9 +91,33 @@ const technologyIcons = {
   HTML: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg",
   React: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   JavaScript: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
+  Figma: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
 };
 
 const webProjectOverrides = {
+  0: {
+    slug: "platemate",
+    title: "PlateMate",
+    year: "2026",
+    status: { fr: "En cours", en: "In progress" },
+    use: { fr: "My Digital Startup", en: "My Digital Startup" },
+    description: {
+      fr: "PlateMate est une plateforme qui met en relation des hôtes passionnés de cuisine et des convives à la recherche d’expériences locales et conviviales. Réalisé en équipe dans le cadre de My Digital Startup, le projet imagine un parcours complet : exploration des tables, profils, création de menus, réservation et paiement sécurisé avec Stripe. Je participe à la conception et à l’intégration d’une expérience responsive, inclusive et accessible, notamment grâce à une structure sémantique, une navigation au clavier, des contrastes lisibles et des composants compréhensibles par tous. Le produit est encore en cours de développement.",
+      en: "PlateMate connects hosts who love cooking with guests looking for welcoming local experiences. Created as a team project for My Digital Startup, it explores a complete journey including table discovery, profiles, menu creation, booking and secure payment with Stripe. I contribute to the design and implementation of a responsive, inclusive and accessible experience through semantic structure, keyboard navigation, readable contrast and components that work for everyone. The product is still in development.",
+    },
+    background: "#d9251b",
+    foreground: "#fff7e8",
+    image: "/assets/platemate/platemate-cover.svg",
+    tabIcon: "/assets/platemate/platemate-logo.svg",
+    slides: ["/assets/platemate/platemate-cover.svg"],
+    githubUrl: null,
+    tools: {
+      Figma: technologyIcons.Figma,
+      React: technologyIcons.React,
+      JavaScript: technologyIcons.JavaScript,
+      Stripe: "/assets/platemate/stripe.svg",
+    },
+  },
   3: {
     slug: "dimension",
     title: "Dimension",

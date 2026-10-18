@@ -7,7 +7,12 @@ function SocialLinks() {
     <ul className="c-social-links" aria-label={copy.contact.social}>
       {profile.socials.map((social) => (
         <li key={social.label}>
-          <a href={social.href} target="_blank" rel="noreferrer">
+          <a
+            href={social.href}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`${social.label} (${copy.accessibility.newWindow})`}
+          >
             <img src={social.icon} alt="" aria-hidden="true" />
             <span className="u-visually-hidden">{social.label}</span>
           </a>
