@@ -7,7 +7,7 @@
   padding: 45px var(--portfolio-page-padding) 80px;
   color: var(--portfolio-text);
 
-  &__header { display: flex; align-items: center; gap: 18px; }
+  &__header { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; }
 
   h1 {
     margin: 0;
@@ -205,8 +205,8 @@
     border: 0;
     background: transparent;
     padding: 0;
-    width: 28px;
-    height: 28px;
+    width: 44px;
+    height: 44px;
     color: #fff;
     cursor: pointer;
     transition: transform var(--portfolio-transition), opacity var(--portfolio-transition);
@@ -234,8 +234,8 @@
     border: 0;
     background: transparent url("/assets/figma/carousel-dot-inactive.svg") center / 12px 12px no-repeat;
     padding: 0;
-    width: 18px;
-    height: 18px;
+    width: 28px;
+    height: 28px;
     cursor: pointer;
     transition: transform var(--portfolio-transition), opacity var(--portfolio-transition);
   }

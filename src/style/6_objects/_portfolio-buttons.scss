@@ -61,13 +61,22 @@
     line-height: .65;
   }
 
-  &__icon img {
+  &__icon svg {
     display: block;
     width: 16px;
     height: 13px;
+    overflow: visible;
   }
 
-  &--compact &__icon img { width: 14px; height: auto; }
+  &__icon path {
+    fill: none;
+    stroke: var(--portfolio-accent);
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  &--compact &__icon svg { width: 16px; height: 13px; }
 }
 
 .o-project-tag {
@@ -77,11 +86,31 @@
   padding: 5px 10px;
   color: var(--portfolio-text);
   font-size: 1.2rem;
+  font-family: $font-family-body;
   font-weight: 700;
+  line-height: 1.2;
   text-transform: uppercase;
 
   &--outline {
     border: 1px solid var(--portfolio-border);
     background: transparent;
+  }
+
+  &--status {
+    border: 1px solid currentcolor;
+    background: #f8d249;
+    color: #17120f;
+  }
+}
+
+@media (max-width: #{$mobile - 1px}) {
+  .o-portfolio-button__icon svg,
+  .o-portfolio-button--compact .o-portfolio-button__icon svg {
+    width: 18px;
+    height: 15px;
+  }
+
+  .o-portfolio-button__icon path {
+    stroke-width: 2;
   }
 }

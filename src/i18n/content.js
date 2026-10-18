@@ -1,7 +1,9 @@
 export const content = {
   fr: {
     navigation: { home: "Accueil", design: "Design", development: "Dev", photography: "Photographie", about: "À propos", contact: "Contact" },
-    header: { home: "Maxence Badin-Léger — accueil", open: "Ouvrir la navigation", close: "Fermer la navigation", language: "Langue du site" },
+    header: { home: "Maxence Badin-Léger — accueil", open: "Ouvrir la navigation", close: "Fermer la navigation", navigation: "Navigation principale", language: "Langue du site" },
+    accessibility: { shortcuts: "Navigation rapide", skipContent: "Aller au contenu", openMenu: "Ouvrir le menu", newWindow: "nouvelle fenêtre" },
+    notFound: { title: "Page introuvable", description: "La page demandée n’existe pas ou a été déplacée.", return: "Retour à l’accueil" },
     home: {
       webTitle: "Projets web", webLink: "Tous les projets web", designTitle: "Travaux design", designLink: "Tous les travaux design",
       aboutTitle: "À propos de moi", aboutLead: "Je suis développeuse web junior à Grenoble, avec un parcours en littérature anglaise.", aboutLink: "En savoir plus",
@@ -56,12 +58,14 @@ export const content = {
       jobs: ["Développeuse front-end", "Développeuse full-stack", "Intégratrice web", "Designer"],
     },
     carousel: { gallery: "Galerie", previous: "Image précédente", next: "Image suivante", choose: "Choisir une image", show: "Afficher l’image", view: "vue" },
-    detail: { notFound: "Projet introuvable", return: "Retour aux projets", overview: "Présentation du projet", year: "Année", use: "Usage", category: "Catégorie", design: "Design", development: "Développement" },
+    detail: { notFound: "Projet introuvable", return: "Retour aux projets", overview: "Présentation du projet", year: "Année", use: "Usage", category: "Catégorie", design: "Design", development: "Développement", visitSite: "Visiter le site de", visitGithub: "Visiter le profil GitHub de Maxence", technologies: "Technologies utilisées" },
     spider: "Animer l’araignée",
   },
   en: {
     navigation: { home: "Home", design: "Design", development: "Dev", photography: "Photography", about: "About", contact: "Contact" },
-    header: { home: "Maxence Badin-Léger — home", open: "Open navigation", close: "Close navigation", language: "Site language" },
+    header: { home: "Maxence Badin-Léger — home", open: "Open navigation", close: "Close navigation", navigation: "Main navigation", language: "Site language" },
+    accessibility: { shortcuts: "Quick navigation", skipContent: "Skip to content", openMenu: "Open menu", newWindow: "new window" },
+    notFound: { title: "Page not found", description: "The requested page does not exist or has moved.", return: "Return home" },
     home: {
       webTitle: "Web projects", webLink: "All web projects", designTitle: "Design works", designLink: "All design works",
       aboutTitle: "About me", aboutLead: "I am a junior web developer based in Grenoble with an English literature background.", aboutLink: "More about me",
@@ -116,7 +120,7 @@ export const content = {
       jobs: ["Front-end Developer", "Full-Stack Developer", "Web Integrator", "Designer"],
     },
     carousel: { gallery: "gallery", previous: "Previous image", next: "Next image", choose: "Choose image", show: "Show image", view: "view" },
-    detail: { notFound: "Project not found", return: "Return to projects", overview: "Project overview", year: "Year", use: "Use", category: "Category", design: "Design", development: "Development" },
+    detail: { notFound: "Project not found", return: "Return to projects", overview: "Project overview", year: "Year", use: "Use", category: "Category", design: "Design", development: "Development", visitSite: "Visit the website for", visitGithub: "Visit Maxence’s GitHub profile", technologies: "Technologies used" },
     spider: "Animate the spider",
   },
 };

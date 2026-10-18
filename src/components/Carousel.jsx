@@ -16,8 +16,14 @@ function Carousel({ items, activeSlug, title, fit = "contain", variant = "wide",
   }
 
   function onKeyDown(event) {
-    if (event.key === "ArrowLeft") goTo(activeIndex - 1);
-    if (event.key === "ArrowRight") goTo(activeIndex + 1);
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      goTo(activeIndex - 1);
+    }
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
+      goTo(activeIndex + 1);
+    }
   }
 
   function onPointerDown(event) {

@@ -6,7 +6,9 @@ function ButtonLink({ children, to, href, compact = false, download = false }) {
     <>
       <span>{children}</span>
       <span className="o-portfolio-button__icon" aria-hidden="true">
-        <img src="/assets/figma/button-arrow.svg" alt="" />
+        <svg viewBox="0 0 16 13" focusable="false">
+          <path d="M8.5 11.7 13.4 6.8H.5m12.9 0L8.5 1.2" />
+        </svg>
       </span>
     </>
   );

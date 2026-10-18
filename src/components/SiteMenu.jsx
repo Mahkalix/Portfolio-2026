@@ -8,8 +8,13 @@ function SiteMenu({ open, onNavigate }) {
   const { copy } = useLanguage();
 
   return (
-    <div id="site-menu" className={`c-site-menu${open ? " is-open" : ""}`} aria-hidden={!open}>
-      <nav aria-label={copy.header.open}>
+    <div
+      id="site-menu"
+      className={`c-site-menu${open ? " is-open" : ""}`}
+      aria-hidden={!open}
+      inert={!open ? true : undefined}
+    >
+      <nav id="primary-navigation" aria-label={copy.header.navigation}>
         <ul>
           {navigationItems.map((item) => (
             <li key={item.key}>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 48" role="img" aria-labelledby="title">
+  <title id="title">PlateMate</title>
+  <g fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+    <circle cx="23" cy="24" r="14"/>
+    <circle cx="23" cy="24" r="7"/>
+    <path d="M4 8v13M9 8v13M4 15h5M42 8v32M38 8v12c0 4 8 4 8 0V8"/>
+  </g>
+  <text x="57" y="31" fill="#111" font-family="Arial, sans-serif" font-size="22" font-weight="800">PlateMate</text>
+</svg>

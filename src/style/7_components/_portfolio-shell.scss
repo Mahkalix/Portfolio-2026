@@ -6,18 +6,6 @@
   color: var(--portfolio-text);
 }
 
-.app-shell--maintenance {
-  #site-header,
-  #site-menu,
-  .c-site-footer {
-    display: none;
-  }
-
-  #main-content {
-    min-height: 100svh;
-  }
-}
-
 .c-skip-navigation {
   position: fixed;
   z-index: 100;
