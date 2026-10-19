@@ -106,7 +106,8 @@ const webProjectOverrides = {
       en: "PlateMate connects hosts who love cooking with guests looking for welcoming local experiences. Created as a team project for My Digital Startup, it explores a complete journey including table discovery, profiles, menu creation, booking and secure payment with Stripe. I contribute to the design and implementation of a responsive, inclusive and accessible experience through semantic structure, keyboard navigation, readable contrast and components that work for everyone. The product is still in development.",
     },
     image: "/assets/platemate/platemate-cover.jpg",
-    tabIcon: "/assets/platemate/platemate-logo.svg",
+    tabIcon: "/assets/platemate/platemate-logo.png",
+    preserveTabIconColor: true,
     slides: ["/assets/platemate/platemate-cover.jpg"],
     githubUrl: null,
     tools: {
@@ -132,29 +133,27 @@ const webProjectOverrides = {
     siteUrl: "https://dimensionmusic.netlify.app/",
     tools: technologyIcons,
   },
-  0: {
-    slug: "kasa",
-    title: "Kasa",
-    year: "2023",
-    use: { fr: "Location de logements", en: "Accommodation" },
+  4: {
+    slug: "trace-zero",
+    title: "Trace//Zero",
+    year: "2026",
+    status: { fr: "En cours", en: "In progress" },
+    use: { fr: "Expérience numérique", en: "Digital experience" },
     description: {
-      fr: "Kasa est une plateforme majeure de location d’appartements en France. Ma mission consistait à moderniser son ancien site ASP.NET en lançant une nouvelle interface React conforme aux maquettes Figma, dans le cadre d’une transition vers une architecture JavaScript avec Node.js côté back-end. J’ai collaboré avec le designer afin d’aligner précisément le design et les fonctionnalités avec la vision du projet.",
-      en: "Kasa is a leading apartment rental platform in France. My mission was to modernize its decade-old ASP.NET website by kickstarting a new React interface aligned with the Figma mockups, as part of a transition to a JavaScript stack with Node.js on the back end. I collaborated with the designer to ensure the design and features matched the project vision.",
+      fr: "Trace//Zero est un concept d’expérience numérique autour de l’identité et de l’empreinte laissée en ligne. L’interface met en scène les traces générées au fil de la navigation — données, habitudes et signaux invisibles — puis propose un parcours pour les comprendre, les maîtriser et revenir vers une présence numérique minimale. Le projet explore une direction visuelle technique et immersive, avec une attention particulière portée à la lisibilité et à l’accessibilité. Il est encore en phase de conception et ne possède pas encore de capture définitive.",
+      en: "Trace//Zero is a digital experience concept about identity and the footprint people leave online. The interface reveals the traces created while browsing — data, habits and invisible signals — then guides users through understanding and controlling them to move towards a minimal digital presence. The project explores a technical, immersive visual direction with particular attention to readability and accessibility. It is still in its design phase and does not yet have a final screenshot.",
     },
-    image: "/assets/kasa-home.png",
-    tabIcon: "/assets/kasa-logo.svg",
-    slides: ["/assets/kasa-home.png"],
-    githubUrl: "https://github.com/Mahkalix/Kasa",
-    siteUrl: "https://kasahome.netlify.app/",
+    image: null,
+    slides: [],
+    hideTabIcon: true,
+    githubUrl: null,
     tools: {
-      CSS: technologyIcons.CSS,
-      HTML: technologyIcons.HTML,
-      React: technologyIcons.React,
-      Swagger: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg",
-      JavaScript: technologyIcons.JavaScript,
+      Figma: technologyIcons.Figma,
     },
   },
 };
+
+const hiddenWebProjectSlots = new Set([0]);
 
 export const webProjects = projectPalette.map(([background, foreground], index) => ({
   slug: `web-project-${index + 1}`,
@@ -171,7 +170,7 @@ export const webProjects = projectPalette.map(([background, foreground], index) 
   slides: designProjects.map((project) => project.image),
   githubUrl: "https://github.com/Mahkalix",
   ...webProjectOverrides[index],
-}));
+})).filter((_, index) => !hiddenWebProjectSlots.has(index));
 
 export const allProjects = [...designProjects, ...specialDesignProjects, ...webProjects];
 

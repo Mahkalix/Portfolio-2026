@@ -162,6 +162,30 @@
 
   img { width: 100%; height: 100%; object-fit: cover; }
 
+  &__placeholder {
+    display: grid;
+    place-content: center;
+    gap: 14px;
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+    color: var(--slide-fg, #fff);
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__placeholder strong {
+    font-family: $font-family-heading;
+    font-size: clamp(4rem, 7vw, 9rem);
+    line-height: .82;
+  }
+
+  &__placeholder small {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+  }
+
   &--contain figure { background: var(--slide-bg, #000); }
   &--contain figure > img { object-fit: contain; }
   &--contain figure.is-previous > img,

@@ -263,6 +263,10 @@
       object-fit: contain;
       filter: brightness(0);
     }
+
+    img.is-project-logo.is-original-color {
+      filter: none;
+    }
   }
   &__item:nth-child(1) {
     --card-rotate: -0.35deg;
