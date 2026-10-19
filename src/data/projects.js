@@ -151,29 +151,9 @@ const webProjectOverrides = {
       Figma: technologyIcons.Figma,
     },
   },
-  0: {
-    slug: "kasa",
-    title: "Kasa",
-    year: "2023",
-    use: { fr: "Location de logements", en: "Accommodation" },
-    description: {
-      fr: "Kasa est une plateforme majeure de location d’appartements en France. Ma mission consistait à moderniser son ancien site ASP.NET en lançant une nouvelle interface React conforme aux maquettes Figma, dans le cadre d’une transition vers une architecture JavaScript avec Node.js côté back-end. J’ai collaboré avec le designer afin d’aligner précisément le design et les fonctionnalités avec la vision du projet.",
-      en: "Kasa is a leading apartment rental platform in France. My mission was to modernize its decade-old ASP.NET website by kickstarting a new React interface aligned with the Figma mockups, as part of a transition to a JavaScript stack with Node.js on the back end. I collaborated with the designer to ensure the design and features matched the project vision.",
-    },
-    image: "/assets/kasa-home.png",
-    tabIcon: "/assets/kasa-logo.svg",
-    slides: ["/assets/kasa-home.png"],
-    githubUrl: "https://github.com/Mahkalix/Kasa",
-    siteUrl: "https://kasahome.netlify.app/",
-    tools: {
-      CSS: technologyIcons.CSS,
-      HTML: technologyIcons.HTML,
-      React: technologyIcons.React,
-      Swagger: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg",
-      JavaScript: technologyIcons.JavaScript,
-    },
-  },
 };
+
+const hiddenWebProjectSlots = new Set([0]);
 
 export const webProjects = projectPalette.map(([background, foreground], index) => ({
   slug: `web-project-${index + 1}`,
@@ -190,7 +170,7 @@ export const webProjects = projectPalette.map(([background, foreground], index) 
   slides: designProjects.map((project) => project.image),
   githubUrl: "https://github.com/Mahkalix",
   ...webProjectOverrides[index],
-}));
+})).filter((_, index) => !hiddenWebProjectSlots.has(index));
 
 export const allProjects = [...designProjects, ...specialDesignProjects, ...webProjects];
 
