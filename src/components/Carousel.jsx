@@ -1,11 +1,11 @@
 import { useRef } from "react";
-import { useLanguage } from "../i18n/language.js";
+import { localize, useLanguage } from "../i18n/language.js";
 
 const swipeThreshold = 52;
 
 function Carousel({ items, activeSlug, title, fit = "contain", variant = "wide", onChange }) {
   const pointerStart = useRef(null);
-  const { copy } = useLanguage();
+  const { copy, language } = useLanguage();
   const itemCount = items.length;
   const activeIndex = Math.max(0, items.findIndex((item) => item.slug === activeSlug));
 
@@ -82,7 +82,7 @@ function Carousel({ items, activeSlug, title, fit = "contain", variant = "wide",
               ) : (
                 <span className="c-carousel__placeholder">
                   <strong>{item.title}</strong>
-                  <small>{copy.carousel.previewPending}</small>
+                  <small>{localize(item.placeholderText, language) || copy.carousel.previewPending}</small>
                 </span>
               )}
             </figure>

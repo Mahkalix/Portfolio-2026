@@ -114,6 +114,26 @@ const webProjectOverrides = {
       Figma: technologyIcons.Figma,
     },
   },
+  2: {
+    slug: "plot-twist",
+    title: "Plot//Twist",
+    year: "2026",
+    use: { fr: "Prochain projet", en: "Next project" },
+    description: {
+      fr: "Un emplacement réservé à la prochaine idée qui viendra compléter cette sélection. Promis, elle arrive bientôt.",
+      en: "A space reserved for the next idea that will complete this selection. Promise, it is coming soon.",
+    },
+    placeholderText: {
+      fr: "Promis, j’arrive avec une nouvelle idée",
+      en: "Promise, I’ll be back with a new idea",
+    },
+    image: null,
+    slides: [],
+    hideTabIcon: true,
+    githubUrl: null,
+    siteUrl: null,
+    tools: {},
+  },
   5: {
     slug: "platemate",
     title: "PlateMate",
