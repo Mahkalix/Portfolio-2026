@@ -51,8 +51,13 @@ function ProjectDetailPage() {
             alt=""
             aria-hidden="true"
           />
-        ) : project.siteUrl || project.githubUrl ? (
+        ) : project.siteUrl || project.githubUrl || project.figmaUrl ? (
           <div className="p-project-detail__links is-development">
+            {project.figmaUrl ? (
+              <a href={project.figmaUrl} target="_blank" rel="noreferrer" aria-label={`${language === "fr" ? "Voir la maquette Figma de" : "View the Figma mockup for"} ${project.title} (${copy.accessibility.newWindow})`}>
+                <img src="/assets/figma/project-external-link.svg" alt="" aria-hidden="true" />
+              </a>
+            ) : null}
             {project.siteUrl ? (
               <a href={project.siteUrl} target="_blank" rel="noreferrer" aria-label={`${copy.detail.visitSite} ${project.title} (${copy.accessibility.newWindow})`}>
                 <img src="/assets/figma/project-external-link.svg" alt="" aria-hidden="true" />

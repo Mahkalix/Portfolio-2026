@@ -133,7 +133,7 @@ const webProjectOverrides = {
     siteUrl: "https://dimensionmusic.netlify.app/",
     tools: technologyIcons,
   },
-  4: {
+  2: {
     slug: "trace-zero",
     title: "Trace//Zero",
     year: "2026",
@@ -146,10 +146,27 @@ const webProjectOverrides = {
     image: null,
     slides: [],
     hideTabIcon: true,
-    githubUrl: null,
+    githubUrl: "https://github.com/Mahkalix/TraceZero",
     tools: {
       Figma: technologyIcons.Figma,
     },
+  },
+  4: {
+    slug: "hors-cadre",
+    title: "HORS CADRE",
+    year: "2026",
+    status: { fr: "En conception", en: "In design" },
+    use: { fr: "Documentaire interactif", en: "Interactive documentary" },
+    description: {
+      fr: "HORS CADRE est une expérience documentaire interactive sur la colère étudiante et sa transformation en bruit médiatique avant même d’être entendue. De la chambre étudiante au cortège, le parcours aborde la précarité, le logement, le coût des études et le sentiment de ne pas être représenté. Un même événement se déploie ensuite dans trois cadres : la rue, les réseaux et les médias. Les témoignages se fragmentent, les images prennent le dessus, puis le bouton « Faire taire » redonne toute leur place aux revendications. Le mode « Écouter » invite à prendre le temps d’une parole complète. La maquette Figma explore une direction graphique brute, entre noir, papier écru et rouge vif. Le projet est en conception : les scènes et paroles de cette première maquette sont fictives ; les futurs contenus documentaires seront sourcés et distingués des reconstitutions. Ce n’est pas du bruit. C’est une génération qui parle.",
+      en: "HORS CADRE is an interactive documentary experience about student anger and how it becomes media noise before it is heard. From a student room to a demonstration, the journey explores financial insecurity, housing, the cost of studying and the feeling of being unrepresented. The same event then unfolds through three frames: the street, social networks and the media. Testimonies fragment and spectacular images take over, until a silence button brings the original demands back into focus. Listen mode invites visitors to stay for a complete story. The Figma mockup explores a raw visual direction in black, off-white paper and vivid red. The project is in design: scenes and voices in this first mockup are fictional; future documentary material will be sourced and distinguished from reconstructions. This is not noise. This is a generation speaking.",
+    },
+    image: "/assets/hors-cadre/hors-cadre-cover.png",
+    slides: ["/assets/hors-cadre/hors-cadre-cover.png"],
+    hideTabIcon: true,
+    githubUrl: "https://github.com/Mahkalix/HORS-CADRE",
+    figmaUrl: "https://www.figma.com/design/cuFSnI2KEsFVh3iOarpbw9?node-id=2-10",
+    tools: { Figma: technologyIcons.Figma },
   },
 };
 
