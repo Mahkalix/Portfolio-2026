@@ -16,11 +16,16 @@ function ProjectStack() {
           }}
         >
           <span className="c-project-stack__tab" aria-hidden="true">
-            <img
-              className={project.tabIcon ? "is-project-logo" : undefined}
-              src={project.tabIcon || "/assets/figma/project-tab-spider.png"}
-              alt=""
-            />
+            {!project.hideTabIcon ? (
+              <img
+                className={[
+                  project.tabIcon ? "is-project-logo" : "",
+                  project.preserveTabIconColor ? "is-original-color" : "",
+                ].filter(Boolean).join(" ") || undefined}
+                src={project.tabIcon || "/assets/figma/project-tab-spider.png"}
+                alt=""
+              />
+            ) : null}
           </span>
           <span className="c-project-stack__heading">
             <span className="c-project-stack__title">{project.title}</span>

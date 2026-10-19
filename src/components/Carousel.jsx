@@ -72,9 +72,19 @@ function Carousel({ items, activeSlug, title, fit = "contain", variant = "wide",
               data-position={position}
               key={item.slug}
               aria-hidden={index !== activeIndex}
-              style={{ "--slide-bg": item.background || "#000" }}
+              style={{
+                "--slide-bg": item.background || "#000",
+                "--slide-fg": item.foreground || "#fff",
+              }}
             >
-              <img src={item.image} alt={`${item.title} — ${copy.carousel.view} ${index + 1}`} draggable="false" />
+              {item.image ? (
+                <img src={item.image} alt={`${item.title} — ${copy.carousel.view} ${index + 1}`} draggable="false" />
+              ) : (
+                <span className="c-carousel__placeholder">
+                  <strong>{item.title}</strong>
+                  <small>{copy.carousel.previewPending}</small>
+                </span>
+              )}
             </figure>
           );
         })}
