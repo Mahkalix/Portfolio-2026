@@ -214,12 +214,6 @@
     align-items: end;
     gap: clamp(6px, 1vw, 14px);
   }
-  &__status {
-    position: absolute;
-    z-index: 3;
-    top: 16px;
-    right: clamp(14px, 2vw, 30px);
-  }
   &__title {
     font-weight: 700;
     text-decoration: none !important;

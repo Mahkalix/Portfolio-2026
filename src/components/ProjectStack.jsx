@@ -1,11 +1,7 @@
 import { Link } from "react-router-dom";
 import { webProjects } from "../data/projects.js";
-import { localize, useLanguage } from "../i18n/language.js";
-import ProjectTag from "./ProjectTag.jsx";
 
 function ProjectStack() {
-  const { language } = useLanguage();
-
   return (
     <div className="c-project-stack">
       {webProjects.map((project, index) => (
@@ -26,11 +22,6 @@ function ProjectStack() {
               alt=""
             />
           </span>
-          {project.status ? (
-            <span className="c-project-stack__status">
-              <ProjectTag status>{localize(project.status, language)}</ProjectTag>
-            </span>
-          ) : null}
           <span className="c-project-stack__heading">
             <span className="c-project-stack__title">{project.title}</span>
             <svg
