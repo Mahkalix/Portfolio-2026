@@ -95,7 +95,7 @@ const technologyIcons = {
 };
 
 const webProjectOverrides = {
-  0: {
+  5: {
     slug: "platemate",
     title: "PlateMate",
     year: "2026",
@@ -105,38 +105,9 @@ const webProjectOverrides = {
       fr: "PlateMate est une plateforme qui met en relation des hôtes passionnés de cuisine et des convives à la recherche d’expériences locales et conviviales. Réalisé en équipe dans le cadre de My Digital Startup, le projet imagine un parcours complet : exploration des tables, profils, création de menus, réservation et paiement sécurisé avec Stripe. Je participe à la conception et à l’intégration d’une expérience responsive, inclusive et accessible, notamment grâce à une structure sémantique, une navigation au clavier, des contrastes lisibles et des composants compréhensibles par tous. Le produit est encore en cours de développement.",
       en: "PlateMate connects hosts who love cooking with guests looking for welcoming local experiences. Created as a team project for My Digital Startup, it explores a complete journey including table discovery, profiles, menu creation, booking and secure payment with Stripe. I contribute to the design and implementation of a responsive, inclusive and accessible experience through semantic structure, keyboard navigation, readable contrast and components that work for everyone. The product is still in development.",
     },
-    background: "#d9251b",
-    foreground: "#fff7e8",
-    image: "/assets/platemate/platemate-cover.svg",
+    image: "/assets/platemate/platemate-cover.jpg",
     tabIcon: "/assets/platemate/platemate-logo.svg",
-    slides: ["/assets/platemate/platemate-cover.svg"],
-    showcase: [
-      {
-        src: "/assets/platemate/figma-homepage.png",
-        label: { fr: "Page d’accueil", en: "Homepage" },
-        alt: { fr: "Maquette complète de la page d’accueil PlateMate", en: "Full PlateMate homepage mockup" },
-      },
-      {
-        src: "/assets/platemate/figma-explorer.png",
-        label: { fr: "Explorer les expériences", en: "Explore experiences" },
-        alt: { fr: "Maquette de la page d’exploration des expériences culinaires", en: "Culinary experiences discovery page mockup" },
-      },
-      {
-        src: "/assets/platemate/figma-host.png",
-        label: { fr: "Devenir hôte", en: "Become a host" },
-        alt: { fr: "Maquette du parcours pour devenir hôte PlateMate", en: "PlateMate host onboarding page mockup" },
-      },
-      {
-        src: "/assets/platemate/figma-signin.png",
-        label: { fr: "Connexion", en: "Sign in" },
-        alt: { fr: "Maquette de l’écran de connexion PlateMate", en: "PlateMate sign-in screen mockup" },
-      },
-      {
-        src: "/assets/platemate/figma-profile.png",
-        label: { fr: "Préférences culinaires", en: "Food preferences" },
-        alt: { fr: "Maquette du formulaire accessible de préférences culinaires", en: "Accessible food preferences form mockup" },
-      },
-    ],
+    slides: ["/assets/platemate/platemate-cover.jpg"],
     githubUrl: null,
     tools: {
       Figma: technologyIcons.Figma,
@@ -161,7 +132,7 @@ const webProjectOverrides = {
     siteUrl: "https://dimensionmusic.netlify.app/",
     tools: technologyIcons,
   },
-  5: {
+  0: {
     slug: "kasa",
     title: "Kasa",
     year: "2023",
