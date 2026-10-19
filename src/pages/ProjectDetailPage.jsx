@@ -88,6 +88,32 @@ function ProjectDetailPage() {
           </ul>
         ) : null}
       </section>
+
+      {project.showcase?.length ? (
+        <section className="p-project-detail__showcase" aria-labelledby="project-showcase-title">
+          <h2 id="project-showcase-title">{copy.detail.showcase}</h2>
+          <div className="p-project-detail__showcase-track">
+            {project.showcase.map((item) => (
+              <figure key={item.src}>
+                <a
+                  href={item.src}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`${copy.detail.openImage} ${localize(item.label, language)} (${copy.accessibility.newWindow})`}
+                >
+                  <img
+                    src={item.src}
+                    alt={localize(item.alt, language)}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+                <figcaption>{localize(item.label, language)}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      ) : null}
     </article>
   );
 }

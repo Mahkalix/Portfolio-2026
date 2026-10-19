@@ -110,6 +110,33 @@ const webProjectOverrides = {
     image: "/assets/platemate/platemate-cover.svg",
     tabIcon: "/assets/platemate/platemate-logo.svg",
     slides: ["/assets/platemate/platemate-cover.svg"],
+    showcase: [
+      {
+        src: "/assets/platemate/figma-homepage.png",
+        label: { fr: "Page d’accueil", en: "Homepage" },
+        alt: { fr: "Maquette complète de la page d’accueil PlateMate", en: "Full PlateMate homepage mockup" },
+      },
+      {
+        src: "/assets/platemate/figma-explorer.png",
+        label: { fr: "Explorer les expériences", en: "Explore experiences" },
+        alt: { fr: "Maquette de la page d’exploration des expériences culinaires", en: "Culinary experiences discovery page mockup" },
+      },
+      {
+        src: "/assets/platemate/figma-host.png",
+        label: { fr: "Devenir hôte", en: "Become a host" },
+        alt: { fr: "Maquette du parcours pour devenir hôte PlateMate", en: "PlateMate host onboarding page mockup" },
+      },
+      {
+        src: "/assets/platemate/figma-signin.png",
+        label: { fr: "Connexion", en: "Sign in" },
+        alt: { fr: "Maquette de l’écran de connexion PlateMate", en: "PlateMate sign-in screen mockup" },
+      },
+      {
+        src: "/assets/platemate/figma-profile.png",
+        label: { fr: "Préférences culinaires", en: "Food preferences" },
+        alt: { fr: "Maquette du formulaire accessible de préférences culinaires", en: "Accessible food preferences form mockup" },
+      },
+    ],
     githubUrl: null,
     tools: {
       Figma: technologyIcons.Figma,

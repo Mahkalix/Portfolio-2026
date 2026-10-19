@@ -58,7 +58,7 @@ export const content = {
       jobs: ["Développeuse front-end", "Développeuse full-stack", "Intégratrice web", "Designer"],
     },
     carousel: { gallery: "Galerie", previous: "Image précédente", next: "Image suivante", choose: "Choisir une image", show: "Afficher l’image", view: "vue" },
-    detail: { notFound: "Projet introuvable", return: "Retour aux projets", overview: "Présentation du projet", year: "Année", use: "Usage", category: "Catégorie", design: "Design", development: "Développement", visitSite: "Visiter le site de", visitGithub: "Visiter le profil GitHub de Maxence", technologies: "Technologies utilisées" },
+    detail: { notFound: "Projet introuvable", return: "Retour aux projets", overview: "Présentation du projet", year: "Année", use: "Usage", category: "Catégorie", design: "Design", development: "Développement", visitSite: "Visiter le site de", visitGithub: "Visiter le profil GitHub de Maxence", technologies: "Technologies utilisées", showcase: "La maquette en images", openImage: "Ouvrir la capture" },
     spider: "Animer l’araignée",
   },
   en: {
@@ -120,7 +120,7 @@ export const content = {
       jobs: ["Front-end Developer", "Full-Stack Developer", "Web Integrator", "Designer"],
     },
     carousel: { gallery: "gallery", previous: "Previous image", next: "Next image", choose: "Choose image", show: "Show image", view: "view" },
-    detail: { notFound: "Project not found", return: "Return to projects", overview: "Project overview", year: "Year", use: "Use", category: "Category", design: "Design", development: "Development", visitSite: "Visit the website for", visitGithub: "Visit Maxence’s GitHub profile", technologies: "Technologies used" },
+    detail: { notFound: "Project not found", return: "Return to projects", overview: "Project overview", year: "Year", use: "Use", category: "Category", design: "Design", development: "Development", visitSite: "Visit the website for", visitGithub: "Visit Maxence’s GitHub profile", technologies: "Technologies used", showcase: "The design in pictures", openImage: "Open screenshot" },
     spider: "Animate the spider",
   },
 };
