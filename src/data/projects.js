@@ -95,6 +95,25 @@ const technologyIcons = {
 };
 
 const webProjectOverrides = {
+  1: {
+    slug: "hors-cadre",
+    title: "Hors Cadre",
+    year: "2026",
+    status: { fr: "En cours", en: "In progress" },
+    use: { fr: "Expérience documentaire", en: "Documentary experience" },
+    description: {
+      fr: "Hors Cadre est une expérience documentaire interactive consacrée à la colère étudiante et au sentiment de rupture entre une génération, les institutions et sa représentation médiatique. Le parcours confronte les témoignages vécus dans la rue, leur circulation sur les réseaux sociaux et leur traitement dans les médias pour révéler ce qui disparaît lorsque les revendications deviennent du bruit. Le projet est encore en cours de développement.",
+      en: "Hors Cadre is an interactive documentary experience about student anger and the growing disconnect between a generation, public institutions and its media representation. The journey contrasts first-hand voices from the streets with their circulation on social media and their coverage in the news, revealing what disappears when demands are reduced to noise. The project is still in development.",
+    },
+    image: null,
+    slides: [],
+    hideTabIcon: true,
+    githubUrl: null,
+    siteUrl: null,
+    tools: {
+      Figma: technologyIcons.Figma,
+    },
+  },
   5: {
     slug: "platemate",
     title: "PlateMate",
@@ -147,6 +166,7 @@ const webProjectOverrides = {
     slides: [],
     hideTabIcon: true,
     githubUrl: null,
+    siteUrl: null,
     tools: {
       Figma: technologyIcons.Figma,
     },
