@@ -192,6 +192,7 @@
   &--contain figure.is-next > img { object-fit: cover; }
 
   &--wide figure > img { object-fit: cover; }
+  &--wide.c-carousel--contain figure.is-active > img { object-fit: contain; }
 
   &--portrait figure {
     left: 20%;

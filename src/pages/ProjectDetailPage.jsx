@@ -36,7 +36,7 @@ function ProjectDetailPage() {
         items={sliderItems}
         activeSlug={project.slug}
         title={project.title}
-        fit="contain"
+        fit={project.imageFit || (isDesignProject ? "contain" : "cover")}
         variant={isDesignProject ? "portrait" : "wide"}
         onChange={(item) => navigate(`/projects/${item.slug}`)}
       />
