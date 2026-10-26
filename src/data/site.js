@@ -17,8 +17,8 @@ export const profile = {
     en: "A Grenoble-based junior web developer passionate about building accessible and user-friendly websites.",
   },
   biography: {
-    fr: "Actuellement en première année de MBA en développement Full Stack à Grenoble, je suis une développeuse web orientée frontend, attentive aux interfaces soignées, au code maintenable et aux détails. À l’aise dans des bases de code et des environnements variés, j’aime prendre en main mes sujets et livrer des résultats concrets. Je souhaite continuer à progresser sur des projets ambitieux.",
-    en: "Currently in my first year of a Full Stack Developer MBA in Grenoble, I am a frontend-focused web developer with a strong eye for clean interfaces, maintainable code and attention to detail. Comfortable diving into existing codebases and varied environments, I like taking ownership of my work and delivering concrete results. I’m looking to grow my skills on ambitious projects.",
+    fr: "Actuellement en deuxième année de MBA en développement Full Stack à Grenoble, je suis une développeuse web orientée frontend, attentive aux interfaces soignées, au code maintenable et aux détails. À l’aise dans des bases de code et des environnements variés, j’aime prendre en main mes sujets et livrer des résultats concrets. Je souhaite continuer à progresser sur des projets ambitieux.",
+    en: "Currently in my second year of a Full Stack Developer MBA in Grenoble, I am a frontend-focused web developer with a strong eye for clean interfaces, maintainable code and attention to detail. Comfortable diving into existing codebases and varied environments, I like taking ownership of my work and delivering concrete results. I’m looking to grow my skills on ambitious projects.",
   },
   socials: [
     { label: "LinkedIn", href: "https://www.linkedin.com/in/maxencebadin-l%C3%A9ger/", icon: "/assets/social-linkedin.svg" },

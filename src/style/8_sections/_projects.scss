@@ -92,3 +92,46 @@
     column-count: 3;
   }
 }
+
+.p-photography {
+  &__thumbnail {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: zoom-in;
+  }
+  &__thumbnail:focus-visible { outline: 4px solid var(--portfolio-accent); outline-offset: -4px; }
+  &__preview {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 20px;
+    border: 0;
+    color: #fff;
+    background: rgb(0 0 0 / .94);
+  }
+  &__preview::backdrop { background: #000; }
+  &__preview-content { display: grid; gap: 16px; max-width: 1400px; height: 100%; margin: auto; grid-template-rows: auto minmax(0, 1fr) auto; }
+  &__preview figure { display: grid; grid-template-rows: minmax(0, 1fr) auto; gap: 12px; min-height: 0; margin: 0; text-align: center; }
+  &__preview img { width: 100%; height: 100%; min-height: 0; object-fit: contain; }
+  &__preview figcaption { font-size: 1.6rem; line-height: 1.5; }
+  &__preview button:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+  &__close {
+    justify-self: end;
+    width: 48px;
+    height: 48px;
+    min-height: 48px;
+    padding: 13px 8px;
+    color: #fff;
+  }
+  &__preview .c-carousel__dots { flex-wrap: wrap; min-width: 0; max-width: 420px; }
+  &__preview .c-carousel__control-arrow { flex-shrink: 0; }
+  &__preview .c-carousel__control-arrow img { width: 24px; height: 24px; }
+  &__preview .c-carousel__controls { align-self: end; }
+}

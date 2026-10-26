@@ -1,11 +1,12 @@
+import CarouselControls from "./CarouselControls.jsx";
 import { useRef } from "react";
-import { useLanguage } from "../i18n/language.js";
+import { localize, useLanguage } from "../i18n/language.js";
 
 const swipeThreshold = 52;
 
 function Carousel({ items, activeSlug, title, fit = "contain", variant = "wide", onChange }) {
   const pointerStart = useRef(null);
-  const { copy } = useLanguage();
+  const { copy, language } = useLanguage();
   const itemCount = items.length;
   const activeIndex = Math.max(0, items.findIndex((item) => item.slug === activeSlug));
 
@@ -81,8 +82,8 @@ function Carousel({ items, activeSlug, title, fit = "contain", variant = "wide",
                 <img src={item.image} alt={`${item.title} — ${copy.carousel.view} ${index + 1}`} draggable="false" />
               ) : (
                 <span className="c-carousel__placeholder">
-                  <strong>{item.title}</strong>
-                  <small>{copy.carousel.previewPending}</small>
+                  <strong>{localize(item.previewTitle, language) || item.title}</strong>
+                  <small>{localize(item.previewCaption, language) || copy.carousel.previewPending}</small>
                 </span>
               )}
             </figure>
@@ -91,38 +92,7 @@ function Carousel({ items, activeSlug, title, fit = "contain", variant = "wide",
 
       </div>
 
-      {itemCount > 1 ? (
-        <div className="c-carousel__controls">
-          <button
-            className="c-carousel__control-arrow"
-            type="button"
-            onClick={() => goTo(activeIndex - 1)}
-            aria-label={copy.carousel.previous}
-          >
-            <img src="/assets/figma/carousel-arrow-left.svg" alt="" draggable="false" />
-          </button>
-          <div className="c-carousel__dots" role="group" aria-label={copy.carousel.choose}>
-            {items.map((item, index) => (
-              <button
-                className={index === activeIndex ? "is-active" : ""}
-                key={`${item.slug}-dot`}
-                type="button"
-                aria-label={`${copy.carousel.show} ${item.title}`}
-                aria-current={index === activeIndex ? "true" : undefined}
-                onClick={() => goTo(index)}
-              />
-            ))}
-          </div>
-          <button
-            className="c-carousel__control-arrow is-next"
-            type="button"
-            onClick={() => goTo(activeIndex + 1)}
-            aria-label={copy.carousel.next}
-          >
-            <img src="/assets/figma/carousel-arrow-left.svg" alt="" draggable="false" />
-          </button>
-        </div>
-      ) : null}
+      <CarouselControls items={items} activeIndex={activeIndex} onSelect={goTo} />
     </section>
   );
 }
