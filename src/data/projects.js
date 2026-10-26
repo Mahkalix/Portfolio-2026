@@ -96,8 +96,10 @@ const technologyIcons = {
 
 const webProjectOverrides = {
   1: {
-    image: "/assets/project-idea.svg",
-    slides: ["/assets/project-idea.svg"],
+    image: null,
+    slides: [],
+    previewTitle: { fr: "Une idée ?", en: "An idea?" },
+    previewCaption: { fr: "Emplacement disponible", en: "Available spot" },
     hideTabIcon: true,
     githubUrl: null,
     use: { fr: "Emplacement disponible", en: "Available spot" },

@@ -16,6 +16,7 @@ export const content = {
     },
     photography: {
       title: "Photographie", description: "Une sélection de photographies issues de ma pratique visuelle personnelle.",
+      openPreview: "Agrandir la photo", preview: "Aperçu de la photographie", close: "Fermer",
       camera: "Appareil photo : Fujifilm X-T30 III", gallery: "Galerie de photographies",
       alt: [
         "Voiture classique devant un hôtel",
@@ -78,6 +79,7 @@ export const content = {
     },
     photography: {
       title: "Photography", description: "A selection of photographs collected through a personal visual practice.",
+      openPreview: "Enlarge photo", preview: "Photography preview", close: "Close",
       camera: "Camera: Fujifilm X-T30 III", gallery: "Photography gallery",
       alt: [
         "Classic car in front of a hotel",
