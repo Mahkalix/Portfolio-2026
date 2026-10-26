@@ -3,6 +3,18 @@ import { useEffect, useRef, useState } from "react";
 import { useLanguage } from "../i18n/language.js";
 
 const photographs = [
+  { name: "DSCF2536", width: 1280, height: 853 },
+  { name: "DSCF2535", width: 1280, height: 1920 },
+  { name: "DSCF2518", width: 1280, height: 853 },
+  { name: "DSCF2514", width: 1280, height: 1920 },
+  { name: "DSCF2502", width: 1280, height: 1920 },
+  { name: "DSCF2466", width: 1280, height: 1920 },
+  { name: "DSCF2443", width: 1280, height: 853 },
+  { name: "DSCF2442", width: 1280, height: 853 },
+  { name: "DSCF2408", width: 1280, height: 853 },
+  { name: "DSCF2383", width: 1280, height: 853 },
+  { name: "DSCF2329", width: 1280, height: 853 },
+  { name: "DSCF2328", width: 1280, height: 853 },
   { name: "DSCF1487", width: 1280, height: 1864 },
   { name: "DSCF1485", width: 1280, height: 1815 },
   { name: "DSCF1219", width: 1280, height: 1920 },
