@@ -96,16 +96,19 @@ const technologyIcons = {
 
 const webProjectOverrides = {
   1: {
+    slug: "chop-chop",
+    title: "CHOP CHOP",
+    year: "2026",
+    status: { fr: "En conception", en: "In design" },
+    use: { fr: "Jeu de cuisine", en: "Cooking game" },
     image: null,
     slides: [],
-    previewTitle: { fr: "Une idée ?", en: "An idea?" },
-    previewCaption: { fr: "Emplacement disponible", en: "Available spot" },
     hideTabIcon: true,
-    githubUrl: null,
-    use: { fr: "Emplacement disponible", en: "Available spot" },
+    githubUrl: "https://github.com/Mahkalix/CHOP-CHOP",
+    tools: { Figma: technologyIcons.Figma },
     description: {
-      fr: "Cet emplacement attend son prochain projet. Une idée, un besoin, une envie de collaborer ? Parlons-en.",
-      en: "This spot is waiting for its next project. An idea, a need, or an opportunity to collaborate? Let’s talk.",
+      fr: "CHOP CHOP est un jeu de cuisine en solo pour navigateur sur ordinateur, inspiré d’Overcooked. Le projet prévoit cinq niveaux et un classement par niveau. Il est actuellement en conception.",
+      en: "CHOP CHOP is a solo cooking game for desktop browsers, inspired by Overcooked. The project is planned to include five levels and a leaderboard for each level. It is currently in design.",
     },
   },
   5: {
