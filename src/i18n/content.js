@@ -46,7 +46,7 @@ export const content = {
         { role: "Alternante développeuse web", period: "Nov. 2023 — Aujourd’hui", company: "La Fabrique — Orange Business", details: ["Drupal", "CMS Eolas", "Intégration web", "Accessibilité web (WCAG)", "JavaScript"] },
         { role: "Alternante développeuse web", period: "Sept. — Nov. 2024", company: "Inforéso", details: ["WordPress", "Elementor", "Figma"] },
         { role: "Intégratrice web (CIE)", period: "Fév. — Août 2024", company: "Inforéso", details: ["WordPress", "Elementor", "Figma"] },
-        { role: "Emplois étudiants", period: "2019 — 2022", company: "Différents postes", details: ["Équipier polyvalent", "Agent d’entretien indépendant", "Animateur"] },
+        { role: "Emplois étudiants", period: "2019 — 2022", company: "Différents postes", details: ["Équipière polyvalente", "Agente d’entretien indépendante", "Animatrice"] },
         { role: "Stage", period: "2017", company: "Mezcalito", details: ["Découverte des métiers d’une agence digitale"] },
       ],
     },
