@@ -109,8 +109,8 @@ const webProjectOverrides = {
     githubUrl: "https://github.com/Mahkalix/CHOP-CHOP",
     tools: { Figma: technologyIcons.Figma },
     description: {
-      fr: "CHOP CHOP est un jeu de cuisine en solo pour navigateur sur ordinateur, inspiré d’Overcooked. Le projet prévoit cinq niveaux et un classement par niveau. Il est actuellement en conception.",
-      en: "CHOP CHOP is a solo cooking game for desktop browsers, inspired by Overcooked. The project is planned to include five levels and a leaderboard for each level. It is currently in design.",
+      fr: "Les commandes s’accumulent, le chrono tourne et rien n’est encore prêt. Derrière les fourneaux, découpe, cuisine et sers sans perdre le fil. Un jeu de cuisine en solo où quelques secondes séparent le coup de feu du chaos.",
+      en: "Orders are piling up, the clock is ticking and nothing is ready yet. Step into the kitchen, chop, cook and serve without losing track. A solo cooking game where a few seconds separate a busy service from total chaos.",
     },
   },
   5: {
@@ -120,8 +120,8 @@ const webProjectOverrides = {
     status: { fr: "En cours", en: "In progress" },
     use: { fr: "My Digital Startup", en: "My Digital Startup" },
     description: {
-      fr: "PlateMate est une plateforme qui met en relation des hôtes passionnés de cuisine et des convives à la recherche d’expériences locales et conviviales. Réalisé en équipe dans le cadre de My Digital Startup, le projet imagine un parcours complet : exploration des tables, profils, création de menus, réservation et paiement sécurisé avec Stripe. Je participe à la conception et à l’intégration d’une expérience responsive, inclusive et accessible, notamment grâce à une structure sémantique, une navigation au clavier, des contrastes lisibles et des composants compréhensibles par tous. Le produit est encore en cours de développement.",
-      en: "PlateMate connects hosts who love cooking with guests looking for welcoming local experiences. Created as a team project for My Digital Startup, it explores a complete journey including table discovery, profiles, menu creation, booking and secure payment with Stripe. I contribute to the design and implementation of a responsive, inclusive and accessible experience through semantic structure, keyboard navigation, readable contrast and components that work for everyone. The product is still in development.",
+      fr: "Un plat qu’on aime préparer, quelques places autour d’une table et des personnes qui ne se connaissent pas encore. PlateMate fait du repas le point de départ d’une rencontre, le temps de découvrir une cuisine, une histoire et celles et ceux qui la partagent.",
+      en: "A dish you love to cook, a few seats around a table and people who have yet to meet. With PlateMate, a shared meal becomes the start of a connection, a chance to discover a cuisine, a story and the people who share it.",
     },
     image: "/assets/platemate/platemate-cover.jpg",
     tabIcon: "/assets/platemate/platemate-logo.png",
@@ -141,8 +141,8 @@ const webProjectOverrides = {
     year: "2023",
     use: { fr: "Musique", en: "Music" },
     description: {
-      fr: "Dimension est une application musicale mobile qui aide à rester motivé et concentré pendant le travail, le sport ou la méditation. Créée avec React et Auth0, elle propose une expérience fluide et intuitive, une navigation simple ainsi que plusieurs pistes musicales avec réglage du volume.",
-      en: "Dimension is a mobile music application that helps users stay motivated and focused while working, exercising or meditating. Built with React and Auth0, it provides a seamless and intuitive experience with simple navigation, a choice of tracks and adjustable volume.",
+      fr: "Un travail à terminer, une séance à commencer ou simplement le besoin de souffler. Dimension est une PWA musicale qui accompagne ces moments où quelques notes suffisent à changer le rythme de la journée.",
+      en: "Work to finish, a workout to begin, or simply a moment to catch your breath. Dimension is a music progressive web app (PWA) for those moments when a few notes are all it takes to change the rhythm of your day.",
     },
     image: "/assets/dimension-home.png",
     tabIcon: "/assets/dimension-logo.png",
@@ -158,8 +158,8 @@ const webProjectOverrides = {
     status: { fr: "En cours", en: "In progress" },
     use: { fr: "Expérience numérique", en: "Digital experience" },
     description: {
-      fr: "Trace//Zero est un concept d’expérience numérique autour de l’identité et de l’empreinte laissée en ligne. L’interface met en scène les traces générées au fil de la navigation — données, habitudes et signaux invisibles — puis propose un parcours pour les comprendre, les maîtriser et revenir vers une présence numérique minimale. Le projet explore une direction visuelle technique et immersive, avec une attention particulière portée à la lisibilité et à l’accessibilité. Il est encore en phase de conception et ne possède pas encore de capture définitive.",
-      en: "Trace//Zero is a digital experience concept about identity and the footprint people leave online. The interface reveals the traces created while browsing — data, habits and invisible signals — then guides users through understanding and controlling them to move towards a minimal digital presence. The project explores a technical, immersive visual direction with particular attention to readability and accessibility. It is still in its design phase and does not yet have a final screenshot.",
+      fr: "Un clic, une recherche, une habitude. On ferme l’onglet, mais quelque chose reste. Trace//Zero rend visibles les traces laissées au fil de la navigation et invite à explorer ce qu’on révèle de soi, parfois sans le savoir.",
+      en: "A click, a search, a habit. You close the tab, but something remains. Trace//Zero reveals the traces we leave as we browse and invites us to explore what we share about ourselves, sometimes without even knowing it.",
     },
     image: null,
     slides: [],
@@ -176,8 +176,8 @@ const webProjectOverrides = {
     status: { fr: "En conception", en: "In design" },
     use: { fr: "Documentaire interactif", en: "Interactive documentary" },
     description: {
-      fr: "HORS CADRE est une expérience documentaire interactive sur la colère étudiante et sa transformation en bruit médiatique avant même d’être entendue. De la chambre étudiante au cortège, le parcours aborde la précarité, le logement, le coût des études et le sentiment de ne pas être représenté. Un même événement se déploie ensuite dans trois cadres : la rue, les réseaux et les médias. Les témoignages se fragmentent, les images prennent le dessus, puis le bouton « Faire taire » redonne toute leur place aux revendications. Le mode « Écouter » invite à prendre le temps d’une parole complète. La maquette Figma explore une direction graphique brute, entre noir, papier écru et rouge vif. Le projet est en conception : les scènes et paroles de cette première maquette sont fictives ; les futurs contenus documentaires seront sourcés et distingués des reconstitutions. Ce n’est pas du bruit. C’est une génération qui parle.",
-      en: "HORS CADRE is an interactive documentary experience about student anger and how it becomes media noise before it is heard. From a student room to a demonstration, the journey explores financial insecurity, housing, the cost of studying and the feeling of being unrepresented. The same event then unfolds through three frames: the street, social networks and the media. Testimonies fragment and spectacular images take over, until a silence button brings the original demands back into focus. Listen mode invites visitors to stay for a complete story. The Figma mockup explores a raw visual direction in black, off-white paper and vivid red. The project is in design: scenes and voices in this first mockup are fictional; future documentary material will be sourced and distinguished from reconstructions. This is not noise. This is a generation speaking.",
+      fr: "Une journée à Grenoble. Des amis à retrouver, un cortège à rejoindre, puis des choix auxquels Elias ne s’était pas préparé. Entre rencontres, tensions et images qui circulent, cette fiction documentaire interactive explore ce qu’une manifestation raconte quand on prend le temps de regarder hors du cadre.",
+      en: "A day in Grenoble. Friends to meet, a march to join, then choices Elias never expected to face. Through encounters, rising tension and images shared online, this interactive documentary fiction explores what a demonstration reveals when we take the time to look beyond the frame.",
     },
     image: "/assets/hors-cadre/hors-cadre-cover.jpg",
     slides: ["/assets/hors-cadre/hors-cadre-cover.jpg"],
