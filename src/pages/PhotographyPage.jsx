@@ -1,3 +1,4 @@
+import CarouselControls from "../components/CarouselControls.jsx";
 import { useEffect, useRef, useState } from "react";
 import { useLanguage } from "../i18n/language.js";
 
@@ -38,9 +39,14 @@ function PhotographyPage() {
     setActiveIndex(null);
   }
 
-  function movePhoto(direction) {
-    setActiveIndex((index) => (index + direction + photographs.length) % photographs.length);
+  function selectPhoto(index) {
+    setActiveIndex((index + photographs.length) % photographs.length);
   }
+
+  const carouselItems = photographs.map((photo, index) => ({
+    slug: photo.name,
+    title: copy.photography.alt[index],
+  }));
 
   return (
     <div className="p-projects p-photography">
@@ -88,23 +94,20 @@ function PhotographyPage() {
         onClose={() => setActiveIndex(null)}
         onClick={(event) => { if (event.target === event.currentTarget) closePreview(); }}
         onKeyDown={(event) => {
-          if (event.key === "ArrowLeft") { event.preventDefault(); movePhoto(-1); }
-          if (event.key === "ArrowRight") { event.preventDefault(); movePhoto(1); }
+          if (event.key === "ArrowLeft") { event.preventDefault(); selectPhoto(activeIndex - 1); }
+          if (event.key === "ArrowRight") { event.preventDefault(); selectPhoto(activeIndex + 1); }
         }}
       >
         {activePhoto ? (
           <div className="p-photography__preview-content">
-            <button type="button" className="p-photography__close" onClick={closePreview} autoFocus>
-              {copy.photography.close} <span aria-hidden="true">×</span>
+            <button type="button" className="c-menu-toggle is-open p-photography__close" aria-label={copy.photography.close} onClick={closePreview} autoFocus>
+              <span aria-hidden="true" /><span aria-hidden="true" /><span aria-hidden="true" />
             </button>
             <figure>
               <img src={`/assets/photography/web/${activePhoto.name}-1280.webp`} alt={copy.photography.alt[activeIndex]} />
               <figcaption aria-live="polite">{copy.photography.alt[activeIndex]} ({activeIndex + 1} / {photographs.length})</figcaption>
             </figure>
-            <div className="p-photography__preview-controls">
-              <button type="button" onClick={() => movePhoto(-1)}>{copy.carousel.previous}</button>
-              <button type="button" onClick={() => movePhoto(1)}>{copy.carousel.next}</button>
-            </div>
+            <CarouselControls items={carouselItems} activeIndex={activeIndex} onSelect={selectPhoto} />
           </div>
         ) : null}
       </dialog>
