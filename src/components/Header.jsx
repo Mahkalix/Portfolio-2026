@@ -10,7 +10,7 @@ function Header({ menuOpen, menuButtonRef, onMenuToggle }) {
     <header id="site-header" className={`c-site-header${menuOpen ? " is-menu-open" : ""}`}>
       {pathname === "/" && <HeroSpider />}
       <Link className="c-site-header__brand" to="/" aria-label={copy.header.home}>
-        <img src="/assets/figma/project-tab-spider.png" alt="" aria-hidden="true" />
+        <img src="/assets/figma/hero-spider.png" alt="" aria-hidden="true" />
       </Link>
       <div className="c-site-header__actions">
         <div className="c-language-switcher" role="group" aria-label={copy.header.language}>
