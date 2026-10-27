@@ -107,7 +107,6 @@ const webProjectOverrides = {
     },
     image: "/assets/hors-cadre/hors-cadre-cover.png",
     slides: ["/assets/hors-cadre/hors-cadre-cover.png"],
-    imageFit: "contain",
     hideTabIcon: true,
     githubUrl: null,
     siteUrl: null,
@@ -116,13 +115,13 @@ const webProjectOverrides = {
     },
   },
   2: {
-    slug: "plot-twist",
-    title: "Plot//Twist",
+    slug: "404-project",
+    title: "404//Project",
     year: "2026",
-    use: { fr: "Prochain projet", en: "Next project" },
+    use: { fr: "Aucun projet", en: "No project" },
     description: {
-      fr: "Un emplacement réservé à la prochaine idée qui viendra compléter cette sélection. Promis, elle arrive bientôt.",
-      en: "A space reserved for the next idea that will complete this selection. Promise, it is coming soon.",
+      fr: "Rien à voir ici pour le moment : ce dossier attend simplement la prochaine idée qui mérite sa place dans le portfolio.",
+      en: "Nothing to see here yet: this folder is simply waiting for the next idea that deserves a place in the portfolio.",
     },
     placeholderText: {
       fr: "Promis, j’arrive avec une nouvelle idée",
