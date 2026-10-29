@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { profile } from "../data/site.js";
 import { useLanguage } from "../i18n/language.js";
 
@@ -46,6 +47,7 @@ function ContactForm({ idPrefix = "contact" }) {
         <label htmlFor={`${idPrefix}-message`}>{copy.contact.message}</label>
         <textarea id={`${idPrefix}-message`} name="message" rows="5" required />
       </div>
+      <p className="c-contact-form__privacy-note"><Link to="/privacy">{copy.navigation.home === "Accueil" ? "Comment vos données sont utilisées" : "How your data is used"}</Link></p>
       <button className="c-contact-form__submit" type="submit">
         <span>{copy.contact.submit}</span>
       </button>
