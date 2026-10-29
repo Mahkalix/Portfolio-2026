@@ -235,7 +235,10 @@
     left: 50%;
     width: min(36%, 430px);
     aspect-ratio: 347 / 389;
-    transform: translateX(-50%);
+    height: auto;
+    max-height: 100%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 
   &--portrait figure.is-previous {
@@ -385,7 +388,7 @@
     &__controls { gap: 6px; }
 
     &--portrait figure { left: 6%; width: 22%; }
-    &--portrait figure.is-active { left: 50%; width: 62%; transform: translateX(-50%); }
+    &--portrait figure.is-active { left: 50%; width: 62%; transform: translate(-50%, -50%); }
     &--portrait figure.is-previous { left: 6%; transform: scale(.95); }
     &--portrait figure.is-next { left: 72%; transform: scale(.95); }
   }
