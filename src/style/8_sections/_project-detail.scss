@@ -145,7 +145,7 @@
     pointer-events: none;
   }
 
-  &--wide figure { border-radius: 22px; }
+  &--wide figure,\n  &--panorama figure { border-radius: 22px; }
 
   figure.is-active {
     z-index: 3;
@@ -191,7 +191,7 @@
   &--contain figure.is-previous > img,
   &--contain figure.is-next > img { object-fit: cover; }
 
-  &--wide figure > img { object-fit: cover; }
+  &--wide figure > img { object-fit: cover; }\n\n  // Trace//Zero screenshots are ultrawide: keep the whole interface visible.\n  &--panorama &__viewport { height: clamp(260px, 45vw, 680px); }\n  &--panorama figure { width: min(90%, 1280px); }\n  &--panorama figure.is-active > img { object-fit: contain; }
 
   &--portrait figure {
     left: 20%;
@@ -304,7 +304,7 @@
 
   .c-carousel {
     &__viewport { height: clamp(250px, 67vw, 360px); }
-    figure { width: 68%; }
+    figure { width: 68%; }\n    &--panorama &__viewport { height: clamp(180px, 51vw, 380px); }\n    &--panorama figure { width: 94%; }
     figure.is-previous { transform: translateX(-72%) scale(.95); }
     figure.is-next { transform: translateX(-28%) scale(.95); }
     &__controls { gap: 6px; }
