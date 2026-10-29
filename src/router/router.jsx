@@ -8,6 +8,8 @@ import ContactPage from "../pages/ContactPage.jsx";
 import PhotographyPage from "../pages/PhotographyPage.jsx";
 import NotFoundPage from "../pages/NotFoundPage.jsx";
 import CopyrightPage from "../pages/CopyrightPage.jsx";
+import LegalPage from "../pages/LegalPage.jsx";
+import SitemapPage from "../pages/SitemapPage.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -37,6 +39,9 @@ export const router = createBrowserRouter([
         path: "copyright",
         element: <CopyrightPage />,
       },
+      { path: "legal", element: <LegalPage /> },
+      { path: "privacy", element: <LegalPage kind="privacy" /> },
+      { path: "sitemap", element: <SitemapPage /> },
       {
         path: "contact",
         element: <ContactPage />,
