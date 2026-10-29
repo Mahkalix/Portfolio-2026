@@ -156,3 +156,37 @@
   background: var(--portfolio-accent);
   transition: width 180ms ease;
 }
+
+// Visible copyright treatment (not embedded in the downloadable source file).
+.p-photography {
+  &__thumbnail { position: relative; overflow: hidden; }
+  &__watermark {
+    position: absolute;
+    z-index: 1;
+    right: 12px;
+    bottom: 12px;
+    padding: 4px 7px;
+    color: #fff;
+    background: rgb(0 0 0 / .4);
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: .03em;
+    pointer-events: none;
+    user-select: none;
+  }
+  &__preview-image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+    height: 100%;
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;
+  }
+  &__preview-image > img { display: block; width: auto; max-width: 100%; height: auto; max-height: 100%; object-fit: contain; }
+  &__preview-image .p-photography__watermark { right: 14px; bottom: 14px; }
+}
