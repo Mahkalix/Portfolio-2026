@@ -117,7 +117,7 @@ function PhotographyPage() {
             </button>
             <figure>
               <img src={`/assets/photography/web/${activePhoto.name}-1280.webp`} alt={copy.photography.alt[activeIndex]} />
-              <figcaption aria-live="polite">{copy.photography.alt[activeIndex]} ({activeIndex + 1} / {photographs.length})</figcaption>
+              
             </figure>
             <CarouselControls items={carouselItems} activeIndex={activeIndex} onSelect={selectPhoto} compact />
           </div>
