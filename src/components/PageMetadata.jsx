@@ -12,6 +12,10 @@ function PageMetadata() {
     let pageName = copy.navigation.home;
 
     if (pathname === "/about") pageName = copy.navigation.about;
+    else if (pathname === "/copyright") pageName = copy.navigation.home === "Accueil" ? "Droits d’auteur" : "Copyright";
+    else if (pathname === "/legal") pageName = copy.navigation.home === "Accueil" ? "Mentions légales" : "Legal notice";
+    else if (pathname === "/privacy") pageName = copy.navigation.home === "Accueil" ? "Confidentialité" : "Privacy policy";
+    else if (pathname === "/sitemap") pageName = copy.navigation.home === "Accueil" ? "Plan du site" : "Sitemap";
     else if (pathname === "/contact") pageName = copy.navigation.contact;
     else if (pathname === "/photography") pageName = copy.navigation.photography;
     else if (pathname === "/projects") {
