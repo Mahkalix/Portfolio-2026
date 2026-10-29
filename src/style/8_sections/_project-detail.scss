@@ -194,7 +194,7 @@
 
   &--wide figure > img { object-fit: cover; }
 
-  // Desktop screenshots use their native ratio without a letterboxed frame.
+  // All project slides share Trace//Zero’s desktop-sized frame.
   &--desktop &__viewport {
     width: min(100%, 1280px);
     height: auto;
@@ -216,11 +216,12 @@
     visibility: hidden;
   }
 
-  &--desktop figure.is-active > img {
+  &--desktop figure > img {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: center;
     border-radius: inherit;
   }
 
