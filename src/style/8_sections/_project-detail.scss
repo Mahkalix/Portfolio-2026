@@ -146,7 +146,8 @@
   }
 
   &--wide figure,
-  &--desktop figure { border-radius: 22px; }
+  &--desktop figure,
+  &--portrait figure { border-radius: 22px; }
 
   figure.is-active {
     z-index: 3;
@@ -254,7 +255,10 @@
     filter: none;
   }
 
-  &--portrait figure.is-active > img { object-fit: contain; }
+  &--portrait figure.is-active > img {
+    object-fit: contain;
+    border-radius: inherit;
+  }
 
   &__control-arrow {
     display: grid;
