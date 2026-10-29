@@ -92,6 +92,7 @@ function PhotographyPage() {
                 fetchPriority={index === 0 ? "high" : "auto"}
                 decoding="async"
               />
+                <span className="p-photography__watermark" aria-hidden="true">© Mahkalix</span>
               </button>
             </figure>
           );
@@ -116,7 +117,10 @@ function PhotographyPage() {
               <span aria-hidden="true" /><span aria-hidden="true" /><span aria-hidden="true" />
             </button>
             <figure>
-              <img src={`/assets/photography/web/${activePhoto.name}-1280.webp`} alt={copy.photography.alt[activeIndex]} />
+              <div className="p-photography__preview-image">
+                <img src={`/assets/photography/web/${activePhoto.name}-1280.webp`} alt={copy.photography.alt[activeIndex]} />
+                <span className="p-photography__watermark" aria-hidden="true">© Mahkalix</span>
+              </div>
               
             </figure>
             <CarouselControls items={carouselItems} activeIndex={activeIndex} onSelect={selectPhoto} compact />
