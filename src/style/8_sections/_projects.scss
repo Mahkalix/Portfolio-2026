@@ -135,3 +135,58 @@
   &__preview .c-carousel__control-arrow img { width: 24px; height: 24px; }
   &__preview .c-carousel__controls { align-self: end; }
 }
+
+// Compact navigation for the photography lightbox (the project carousel keeps its dots).
+.p-photography__preview .c-carousel__controls.is-compact {
+  gap: 18px;
+}
+
+.p-photography__preview .c-carousel__progress {
+  width: clamp(110px, 26vw, 240px);
+  height: 4px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: rgb(255 255 255 / .28);
+}
+
+.p-photography__preview .c-carousel__progress > span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--portfolio-accent);
+  transition: width 180ms ease;
+}
+
+// Visible copyright treatment (not embedded in the downloadable source file).
+.p-photography {
+  &__thumbnail { position: relative; overflow: hidden; }
+  &__watermark {
+    position: absolute;
+    z-index: 1;
+    right: 12px;
+    bottom: 12px;
+    padding: 4px 7px;
+    color: #fff;
+    background: rgb(0 0 0 / .4);
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: .03em;
+    pointer-events: none;
+    user-select: none;
+  }
+  &__preview-image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+    height: 100%;
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;
+  }
+  &__preview-image > img { display: block; width: auto; max-width: 100%; height: auto; max-height: 100%; object-fit: contain; }
+  &__preview-image .p-photography__watermark { right: 14px; bottom: 14px; }
+}

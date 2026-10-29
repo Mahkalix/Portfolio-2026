@@ -21,6 +21,7 @@ function ProjectStack() {
                 className={[
                   project.tabIcon ? "is-project-logo" : "",
                   project.preserveTabIconColor ? "is-original-color" : "",
+                  project.slug === "trace-zero" ? "is-trace-zero" : "",
                 ].filter(Boolean).join(" ") || undefined}
                 src={project.tabIcon || "/assets/figma/project-tab-spider.png"}
                 alt=""

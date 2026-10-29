@@ -164,6 +164,7 @@ const webProjectOverrides = {
     image: "/assets/trace-zero/trace-zero-desktop.png",
     slides: ["/assets/trace-zero/trace-zero-desktop.png"],
     tabIcon: "/assets/trace-zero/trace-zero-logo.svg",
+    preserveTabIconColor: true,
     githubUrl: "https://github.com/Mahkalix/TraceZero",
     siteUrl: null,
     tools: {
