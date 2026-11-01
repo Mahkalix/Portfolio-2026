@@ -78,18 +78,13 @@
   }
 
   &__brand {
-    display: grid;
-    place-items: center;
-    width: clamp(48px, 5vw, 66px);
-    aspect-ratio: 1;
-    overflow: hidden;
+    display: block;
+    width: clamp(124px, 16vw, 220px);
 
     img {
       display: block;
-      width: clamp(76px, 7vw, 92px);
-      max-width: none;
+      width: 100%;
       height: auto;
-      transform: translate(-21%, -27%);
     }
   }
 
