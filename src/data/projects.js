@@ -99,7 +99,7 @@ const webProjectOverrides = {
     tabIcon: "/assets/the-den-emblem.png",
     slides: ["/assets/the-den-cover.png", "/assets/the-den-home.png", "/assets/the-den-library.png"],
     githubUrl: "https://github.com/Mahkalix/Dimension",
-    siteUrl: "https://dimensionmusic.netlify.app/",
+    siteUrl: "https://theden-thebear.vercel.app/",
     tools: technologyIcons,
   },
   2: {
