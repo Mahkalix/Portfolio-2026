@@ -195,11 +195,11 @@
 
   &--wide figure > img { object-fit: cover; }
 
-  // All project slides share Trace//Zero’s desktop-sized frame.
+  // Keep a common frame while showing each screenshot in full.
   &--desktop &__viewport {
     width: min(100%, 1280px);
     height: auto;
-    aspect-ratio: 1763 / 831;
+    aspect-ratio: 16 / 10;
     margin-inline: auto;
     border-radius: 22px;
   }
@@ -221,7 +221,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
     border-radius: inherit;
   }
@@ -389,6 +389,7 @@
     &__viewport { height: clamp(250px, 67vw, 360px); }
     figure { width: 68%; }
     &--desktop &__viewport { width: 100%; height: auto; }
+    &--desktop figure { width: 100%; }
     figure.is-previous { transform: translateX(-72%) scale(.95); }
     figure.is-next { transform: translateX(-28%) scale(.95); }
     &__controls { gap: 6px; }
