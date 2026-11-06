@@ -100,7 +100,7 @@ const webProjectOverrides = {
     tabIcon: "/assets/the-den-emblem.png",
     slides: ["/assets/the-den-player.png", "/assets/the-den-preview.png"],
     githubUrl: "https://github.com/Mahkalix/THEDEN",
-    siteUrl: "https://theden-thebear.vercel.app/",
+    siteUrl: "https://theden-thebear.vercel.app/player",
     tools: {
       "Next.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
       React: technologyIcons.React,
