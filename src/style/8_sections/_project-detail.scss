@@ -389,6 +389,7 @@
     &__viewport { height: clamp(250px, 67vw, 360px); }
     figure { width: 68%; }
     &--desktop &__viewport { width: 100%; height: auto; }
+    &--desktop figure { width: 100%; }
     figure.is-previous { transform: translateX(-72%) scale(.95); }
     figure.is-next { transform: translateX(-28%) scale(.95); }
     &__controls { gap: 6px; }
