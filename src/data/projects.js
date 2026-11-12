@@ -96,10 +96,10 @@ const webProjectOverrides = {
       fr: "Un plat qu’on aime préparer, quelques places autour d’une table et des personnes qui ne se connaissent pas encore. PlateMate fait du repas le point de départ d’une rencontre, le temps de découvrir une cuisine, une histoire et celles et ceux qui la partagent.",
       en: "A dish you love to cook, a few seats around a table and people who have yet to meet. With PlateMate, a shared meal becomes the start of a connection, a chance to discover a cuisine, a story and the people who share it.",
     },
-    image: "/assets/platemate/platemate-cover.jpg",
+    image: "/assets/platemate/platemate-preview.png",
     tabIcon: "/assets/platemate/platemate-logo.png",
     preserveTabIconColor: true,
-    slides: ["/assets/platemate/platemate-cover.jpg"],
+    slides: ["/assets/platemate/platemate-preview.png"],
     githubUrl: null,
     tools: {
       Figma: technologyIcons.Figma,
