@@ -331,3 +331,9 @@
     height: 19px;
   }
 }
+
+@media (min-width: $desktop) {
+  .p-home__design-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

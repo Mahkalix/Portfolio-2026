@@ -190,3 +190,9 @@
   &__preview-image > img { display: block; width: auto; max-width: 100%; height: auto; max-height: 100%; object-fit: contain; }
   &__preview-image .p-photography__watermark { right: 14px; bottom: 14px; }
 }
+
+@media (min-width: $desktop) {
+  .p-projects__design-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
