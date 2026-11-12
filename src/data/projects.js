@@ -46,6 +46,28 @@ const technologyIcons = {
 };
 
 const webProjectOverrides = {
+  0: {
+    slug: "vlt-profiles",
+    title: "VLT Profiles",
+    use: { fr: "Transfert de réglages VALORANT", en: "VALORANT settings transfer" },
+    description: {
+      fr: "VLT Profiles sauvegarde les réglages synchronisés de VALORANT pour les réutiliser sur un autre compte Riot. Le connecteur Windows lit les réglages du compte actif dans Riot Client et les enregistre sur le PC. Après le changement de compte, il sauvegarde les réglages du compte de destination avant d’y appliquer le profil.",
+      en: "VLT Profiles saves synced VALORANT settings so you can reuse them on another Riot account. The Windows connector reads settings from the active Riot Client account and saves them on your PC. After you switch accounts, it backs up the destination account’s settings before applying the profile.",
+    },
+    image: "/assets/vlt-profiles/preview.png",
+    slides: ["/assets/vlt-profiles/preview.png"],
+    tabIcon: "/assets/vlt-profiles/icon.png",
+    preserveTabIconColor: true,
+    siteUrl: "https://vlt-profiles-mahkalix.vercel.app/",
+    githubUrl: null,
+    tools: {
+      HTML: technologyIcons.HTML,
+      CSS: technologyIcons.CSS,
+      JavaScript: technologyIcons.JavaScript,
+      "Node.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+      PowerShell: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powershell/powershell-original.svg",
+    },
+  },
   1: {
     slug: "chop-chop",
     title: "CHOP CHOP",
@@ -150,8 +172,6 @@ const webProjectOverrides = {
   },
 };
 
-const hiddenWebProjectSlots = new Set([0]);
-
 export const webProjects = projectPalette.map(([background, foreground], index) => ({
   slug: `web-project-${index + 1}`,
   title: `Project ${String(index + 1).padStart(2, "0")}`,
@@ -167,7 +187,7 @@ export const webProjects = projectPalette.map(([background, foreground], index) 
   slides: designProjects.map((project) => project.image),
   githubUrl: "https://github.com/Mahkalix",
   ...webProjectOverrides[index],
-})).filter((_, index) => !hiddenWebProjectSlots.has(index));
+}));
 
 export const allProjects = [...designProjects, ...specialDesignProjects, ...webProjects];
 
