@@ -118,9 +118,9 @@ const webProjectOverrides = {
       fr: "Une marmite chauffe dans la cuisine de The Bear. Avant que les autres arrivent, Carmy lance un morceau. THE DEN imagine le lecteur qu’il garderait à portée de main. Des images de la série, une cuisine en arrière-plan et des panneaux translucides composent un espace pour écouter avant le service ou après la fermeture. Le projet terminé propose des playlists thématiques, une recherche de morceaux et un lecteur audio avec réglage du volume, accessible aussi sans compte. Développé avec Next.js, React, TypeScript et SCSS, il est disponible en ligne sur Vercel.",
       en: "A pot is warming in the kitchen of The Bear. Before the others arrive, Carmy puts on a track. THE DEN imagines the music player he would keep close at hand. Images from the series, a kitchen backdrop and translucent panels create a space for listening before service or after hours. The completed project offers themed playlists, track search and an audio player with volume controls, also accessible without an account. Built with Next.js, React, TypeScript and SCSS, it is available online on Vercel.",
     },
-    image: "/assets/the-den-player.png",
+    image: "/assets/the-den-player-live.png",
     tabIcon: "/assets/the-den-emblem.png",
-    slides: ["/assets/the-den-player.png", "/assets/the-den-preview.png"],
+    slides: ["/assets/the-den-player-live.png", "/assets/the-den-preview.png"],
     githubUrl: "https://github.com/Mahkalix/THEDEN",
     siteUrl: "https://theden-thebear.vercel.app/player",
     tools: {
