@@ -46,14 +46,36 @@ const technologyIcons = {
 };
 
 const webProjectOverrides = {
+  0: {
+    slug: "vlt-profiles",
+    title: "VLT Profiles",
+    use: { fr: "Transfert de réglages VALORANT", en: "VALORANT settings transfer" },
+    description: {
+      fr: "VLT Profiles sauvegarde les réglages synchronisés de VALORANT pour les réutiliser sur un autre compte Riot. Le connecteur Windows lit les réglages du compte actif dans Riot Client et les enregistre sur le PC. Après le changement de compte, il sauvegarde les réglages du compte de destination avant d’y appliquer le profil.",
+      en: "VLT Profiles saves synced VALORANT settings so you can reuse them on another Riot account. The Windows connector reads settings from the active Riot Client account and saves them on your PC. After you switch accounts, it backs up the destination account’s settings before applying the profile.",
+    },
+    image: "/assets/vlt-profiles/preview.png",
+    slides: ["/assets/vlt-profiles/preview.png"],
+    tabIcon: "/assets/vlt-profiles/icon.png",
+    preserveTabIconColor: true,
+    siteUrl: "https://vlt-profiles-mahkalix.vercel.app/",
+    githubUrl: null,
+    tools: {
+      HTML: technologyIcons.HTML,
+      CSS: technologyIcons.CSS,
+      JavaScript: technologyIcons.JavaScript,
+      "Node.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+      PowerShell: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powershell/powershell-original.svg",
+    },
+  },
   1: {
     slug: "chop-chop",
     title: "CHOP CHOP",
     year: "2026",
     status: { fr: "En conception", en: "In design" },
     use: { fr: "Jeu de cuisine", en: "Cooking game" },
-    image: "/assets/chop-chop/chop-chop-cover.png",
-    slides: ["/assets/chop-chop/chop-chop-cover.png"],
+    image: "/assets/chop-chop/chop-chop-preview.png",
+    slides: ["/assets/chop-chop/chop-chop-preview.png"],
     tabIcon: "/assets/chop-chop/knife.svg",
     preserveTabIconColor: true,
     figmaUrl: "https://www.figma.com/design/5YyQNON3zicZCKuN1CkEH0?node-id=15-1179",
@@ -74,10 +96,10 @@ const webProjectOverrides = {
       fr: "Un plat qu’on aime préparer, quelques places autour d’une table et des personnes qui ne se connaissent pas encore. PlateMate fait du repas le point de départ d’une rencontre, le temps de découvrir une cuisine, une histoire et celles et ceux qui la partagent.",
       en: "A dish you love to cook, a few seats around a table and people who have yet to meet. With PlateMate, a shared meal becomes the start of a connection, a chance to discover a cuisine, a story and the people who share it.",
     },
-    image: "/assets/platemate/platemate-cover.jpg",
+    image: "/assets/platemate/platemate-preview.png",
     tabIcon: "/assets/platemate/platemate-logo.png",
     preserveTabIconColor: true,
-    slides: ["/assets/platemate/platemate-cover.jpg"],
+    slides: ["/assets/platemate/platemate-preview.png"],
     githubUrl: null,
     tools: {
       Figma: technologyIcons.Figma,
@@ -96,9 +118,9 @@ const webProjectOverrides = {
       fr: "Une marmite chauffe dans la cuisine de The Bear. Avant que les autres arrivent, Carmy lance un morceau. THE DEN imagine le lecteur qu’il garderait à portée de main. Des images de la série, une cuisine en arrière-plan et des panneaux translucides composent un espace pour écouter avant le service ou après la fermeture. Le projet terminé propose des playlists thématiques, une recherche de morceaux et un lecteur audio avec réglage du volume, accessible aussi sans compte. Développé avec Next.js, React, TypeScript et SCSS, il est disponible en ligne sur Vercel.",
       en: "A pot is warming in the kitchen of The Bear. Before the others arrive, Carmy puts on a track. THE DEN imagines the music player he would keep close at hand. Images from the series, a kitchen backdrop and translucent panels create a space for listening before service or after hours. The completed project offers themed playlists, track search and an audio player with volume controls, also accessible without an account. Built with Next.js, React, TypeScript and SCSS, it is available online on Vercel.",
     },
-    image: "/assets/the-den-player.png",
+    image: "/assets/the-den-player-live.png",
     tabIcon: "/assets/the-den-emblem.png",
-    slides: ["/assets/the-den-player.png", "/assets/the-den-preview.png"],
+    slides: ["/assets/the-den-player-live.png", "/assets/the-den-preview.png"],
     githubUrl: "https://github.com/Mahkalix/THEDEN",
     siteUrl: "https://theden-thebear.vercel.app/player",
     tools: {
@@ -150,8 +172,6 @@ const webProjectOverrides = {
   },
 };
 
-const hiddenWebProjectSlots = new Set([0]);
-
 export const webProjects = projectPalette.map(([background, foreground], index) => ({
   slug: `web-project-${index + 1}`,
   title: `Project ${String(index + 1).padStart(2, "0")}`,
@@ -167,7 +187,7 @@ export const webProjects = projectPalette.map(([background, foreground], index) 
   slides: designProjects.map((project) => project.image),
   githubUrl: "https://github.com/Mahkalix",
   ...webProjectOverrides[index],
-})).filter((_, index) => !hiddenWebProjectSlots.has(index));
+}));
 
 export const allProjects = [...designProjects, ...specialDesignProjects, ...webProjects];
 
