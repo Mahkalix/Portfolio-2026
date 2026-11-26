@@ -43,6 +43,18 @@ const technologyIcons = {
   React: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   JavaScript: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
   Figma: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+  TypeScript: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+  SCSS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
+  Vite: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg",
+  "Node.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  PostgreSQL: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+  Supabase: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg",
+  Phaser: "/assets/technologies/phaser.svg",
+  Fastify: "/assets/technologies/fastify.svg",
+  Express: "/assets/technologies/express.svg",
+  "Drizzle ORM": "/assets/technologies/drizzle.svg",
+  Auth0: "/assets/technologies/auth0.svg",
+  Miro: "/assets/technologies/miro.svg",
 };
 
 const webProjectOverrides = {
@@ -80,7 +92,19 @@ const webProjectOverrides = {
     preserveTabIconColor: true,
     siteUrl: "https://chop-chop-front.vercel.app/",
     githubUrl: "https://github.com/Mahkalix/CHOP-CHOP",
-    tools: { Figma: technologyIcons.Figma },
+    tools: {
+      Figma: technologyIcons.Figma,
+      React: technologyIcons.React,
+      TypeScript: technologyIcons.TypeScript,
+      Phaser: technologyIcons.Phaser,
+      SCSS: technologyIcons.SCSS,
+      Vite: technologyIcons.Vite,
+      "Node.js": technologyIcons["Node.js"],
+      Fastify: technologyIcons.Fastify,
+      PostgreSQL: technologyIcons.PostgreSQL,
+      "Drizzle ORM": technologyIcons["Drizzle ORM"],
+      Supabase: technologyIcons.Supabase,
+    },
     description: {
       fr: "Les commandes s’accumulent, le chrono tourne et rien n’est encore prêt. Derrière les fourneaux, découpe, cuisine et sers sans perdre le fil. Un jeu de cuisine en solo où quelques secondes séparent le coup de feu du chaos.",
       en: "Orders are piling up, the clock is ticking and nothing is ready yet. Step into the kitchen, chop, cook and serve without losing track. A solo cooking game where a few seconds separate a busy service from total chaos.",
@@ -106,6 +130,13 @@ const webProjectOverrides = {
       React: technologyIcons.React,
       JavaScript: technologyIcons.JavaScript,
       Stripe: "/assets/platemate/stripe.svg",
+      TypeScript: technologyIcons.TypeScript,
+      SCSS: technologyIcons.SCSS,
+      Vite: technologyIcons.Vite,
+      "Node.js": technologyIcons["Node.js"],
+      Express: technologyIcons.Express,
+      PostgreSQL: technologyIcons.PostgreSQL,
+      Auth0: technologyIcons.Auth0,
     },
   },
   3: {
@@ -126,8 +157,10 @@ const webProjectOverrides = {
     tools: {
       "Next.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
       React: technologyIcons.React,
+      JavaScript: technologyIcons.JavaScript,
       TypeScript: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
       SCSS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
+      Auth0: technologyIcons.Auth0,
     },
   },
   2: {
@@ -168,7 +201,7 @@ const webProjectOverrides = {
     hideTabIcon: true,
     githubUrl: "https://github.com/Mahkalix/HORS-CADRE",
     figmaUrl: "https://www.figma.com/design/cuFSnI2KEsFVh3iOarpbw9?node-id=26-38621",
-    tools: { Figma: technologyIcons.Figma },
+    tools: { Figma: technologyIcons.Figma, Miro: technologyIcons.Miro },
   },
 };
 
