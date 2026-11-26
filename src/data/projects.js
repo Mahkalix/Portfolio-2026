@@ -72,7 +72,7 @@ const webProjectOverrides = {
     slug: "chop-chop",
     title: "CHOP CHOP",
     year: "2026",
-    status: { fr: "En conception", en: "In design" },
+    status: { fr: "Prototype jouable", en: "Playable prototype" },
     use: { fr: "Jeu de cuisine", en: "Cooking game" },
     image: "/assets/chop-chop/chop-chop-preview.png",
     slides: ["/assets/chop-chop/chop-chop-preview.png"],
@@ -80,7 +80,47 @@ const webProjectOverrides = {
     preserveTabIconColor: true,
     figmaUrl: "https://www.figma.com/design/5YyQNON3zicZCKuN1CkEH0?node-id=15-1179",
     githubUrl: "https://github.com/Mahkalix/CHOP-CHOP",
-    tools: { Figma: technologyIcons.Figma },
+    siteUrl: "https://chop-chop-front.vercel.app/",
+    siteLabel: { fr: "Jouer à la démo", en: "Play the demo" },
+    demoNote: {
+      fr: "Sur ordinateur, avec un clavier. Une partie dure 3 minutes. Choisis un pseudo, puis lance le niveau 1 pour découvrir les commandes.",
+      en: "Play on a computer with a keyboard. Each round lasts 3 minutes. Choose a nickname, then start level 1 to learn the controls.",
+    },
+    tools: {
+      Figma: technologyIcons.Figma,
+      React: technologyIcons.React,
+      TypeScript: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+      Phaser: null,
+    },
+    caseStudy: {
+      role: {
+        fr: "Mon rôle : frontend et UX, dans une équipe de quatre. Je travaille sur les interfaces React, les parcours de jeu et l’intégration du gameplay Phaser.",
+        en: "My role: frontend and UX in a team of four. I work on the React interfaces, game flows and Phaser gameplay integration.",
+      },
+      sections: [
+        {
+          title: { fr: "Le défi", en: "The challenge" },
+          text: {
+            fr: "Rendre une cuisine sous pression compréhensible : identifier les commandes, préparer les ingrédients et servir la bonne assiette avant la fin du chrono.",
+            en: "Make a busy kitchen understandable: identify orders, prepare ingredients and serve the right plate before time runs out.",
+          },
+        },
+        {
+          title: { fr: "Mes contributions", en: "My contributions" },
+          text: {
+            fr: "Intégration des écrans d’accueil et de sélection, des cuisines et de la progression sur trois niveaux. Travail sur les recettes illustrées, les interactions au clavier et la transition entre le menu et la partie.",
+            en: "Implemented the home and selection screens, kitchens and progression across three levels. Worked on illustrated recipes, keyboard interactions and the transition from the menu into a round.",
+          },
+        },
+        {
+          title: { fr: "Le résultat", en: "The result" },
+          text: {
+            fr: "Un prototype jouable avec trois niveaux, six chefs et des parties de trois minutes. Le parcours va du choix du chef au bilan de service, avec pause, aide et possibilité de rejouer. Le jeu se pratique au clavier, sans commandes tactiles.",
+            en: "A playable prototype with three levels, six chefs and three-minute rounds. The flow runs from chef selection to the end-of-round summary, with pause, help and replay. The game uses keyboard controls and does not support touch input.",
+          },
+        },
+      ],
+    },
     description: {
       fr: "Les commandes s’accumulent, le chrono tourne et rien n’est encore prêt. Derrière les fourneaux, découpe, cuisine et sers sans perdre le fil. Un jeu de cuisine en solo où quelques secondes séparent le coup de feu du chaos.",
       en: "Orders are piling up, the clock is ticking and nothing is ready yet. Step into the kitchen, chop, cook and serve without losing track. A solo cooking game where a few seconds separate a busy service from total chaos.",
