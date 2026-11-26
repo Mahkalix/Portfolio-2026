@@ -71,7 +71,7 @@ export const content = {
       jobs: ["Développeuse front-end", "Développeuse full-stack", "Intégratrice web", "Designer"],
     },
     carousel: { gallery: "Galerie", previous: "Image précédente", next: "Image suivante", choose: "Choisir une image", show: "Afficher l’image", view: "vue", previewPending: "Aperçu à venir" },
-    detail: { notFound: "Projet introuvable", return: "Retour aux projets", overview: "Présentation du projet", year: "Année", use: "Usage", category: "Catégorie", design: "Design", development: "Développement", openSite: "Ouvrir le site", openCode: "Voir le code", openDesign: "Voir la maquette", projectLinks: "Explorer le projet", contribution: "Du concept au jeu", technologies: "Technologies utilisées" },
+    detail: { notFound: "Projet introuvable", return: "Retour aux projets", overview: "Présentation du projet", year: "Année", use: "Usage", category: "Catégorie", design: "Design", development: "Développement", visitSite: "Visiter le site de", visitGithub: "Visiter le profil GitHub de Maxence", technologies: "Technologies utilisées" },
     spider: "Animer l’araignée",
   },
   en: {
@@ -146,7 +146,7 @@ export const content = {
       jobs: ["Front-end Developer", "Full-Stack Developer", "Web Integrator", "Designer"],
     },
     carousel: { gallery: "gallery", previous: "Previous image", next: "Next image", choose: "Choose image", show: "Show image", view: "view", previewPending: "Preview coming soon" },
-    detail: { notFound: "Project not found", return: "Return to projects", overview: "Project overview", year: "Year", use: "Use", category: "Category", design: "Design", development: "Development", openSite: "Open website", openCode: "View code", openDesign: "View design", projectLinks: "Explore the project", contribution: "From concept to game", technologies: "Technologies used" },
+    detail: { notFound: "Project not found", return: "Return to projects", overview: "Project overview", year: "Year", use: "Use", category: "Category", design: "Design", development: "Development", visitSite: "Visit the website for", visitGithub: "Visit Maxence’s GitHub profile", technologies: "Technologies used" },
     spider: "Animate the spider",
   },
 };

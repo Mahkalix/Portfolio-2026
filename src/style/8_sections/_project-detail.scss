@@ -19,45 +19,32 @@
     text-transform: uppercase;
   }
 
-  &__actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    width: 100%;
-    margin-top: 8px;
+  &__links {
+    flex: 0 0 auto;
+    object-fit: contain;
+
+    &.is-design { width: 25px; height: 25px; }
+    &.is-development {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      width: auto;
+      height: 32px;
+    }
+
+    &.is-development a {
+      display: grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      text-decoration: none;
+      transition: opacity var(--portfolio-transition), transform var(--portfolio-transition);
+    }
+
+    &.is-development a:hover,
+    &.is-development a:focus-visible { opacity: .78; transform: translateY(-2px); }
+    &.is-development img { display: block; width: 32px; height: 32px; object-fit: contain; }
   }
-
-  &__actions a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 48px;
-    padding: 12px 20px;
-    border: 1px solid currentColor;
-    border-radius: 999px;
-    color: var(--portfolio-text);
-    font-size: 1.6rem;
-    font-weight: 700;
-    line-height: 1.3;
-    text-decoration: none;
-  }
-
-  &__actions a.is-primary {
-    border-color: var(--portfolio-accent);
-    background: var(--portfolio-accent);
-    color: #17100d;
-  }
-
-  &__actions a:hover { background: var(--portfolio-text); color: var(--portfolio-bg); }
-  &__actions a:focus-visible { outline: 3px solid var(--portfolio-text); outline-offset: 4px; }
-  &__demo-note { width: 100%; max-width: 75ch; margin: 0; font-size: 1.6rem; line-height: 1.6; }
-
-  &__case-study { display: grid; gap: 24px; padding-top: 32px; border-top: 1px solid var(--portfolio-border); }
-  &__case-study h2 { margin: 0; font-size: clamp(3.2rem, 4vw, 5.6rem); line-height: 1.1; }
-  &__role { margin: 0; max-width: 75ch; font-size: 2rem; line-height: 1.6; }
-  &__case-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
-  &__case-grid h3 { margin: 0 0 12px; color: var(--portfolio-accent); font-size: 2rem; line-height: 1.3; }
-  &__case-grid p { margin: 0; font-size: 1.6rem; line-height: 1.7; }
 
   &__summary {
     display: flex;
@@ -124,7 +111,6 @@
   }
 
   &__tools img { width: 58px; height: 58px; object-fit: contain; }
-  &__tool-name { display: grid; place-items: center; width: 58px; height: 58px; border: 1px solid var(--portfolio-border); border-radius: 12px; font-size: 2.4rem; }
 
   &--missing { min-height: 60vh; }
 }
@@ -378,10 +364,9 @@
 
     &__header { gap: 10px; }
     h1 { font-size: clamp(4.8rem, 16vw, 6.4rem); }
-    &__actions { gap: 10px; }
-    &__actions a { padding-inline: 16px; }
-    &__case-grid { grid-template-columns: 1fr; gap: 24px; }
-    &__role { font-size: 1.8rem; }
+    &__links.is-development { gap: 14px; height: 28px; }
+    &__links.is-development a,
+    &__links.is-development img { width: 28px; height: 28px; }
     &__summary { gap: 30px; }
     &__summary > p { font-size: 1.8rem; text-align: left; }
 
@@ -397,7 +382,7 @@
     &__tool { width: 72px; height: 72px; }
     &__tools { gap: 12px; }
     &__tools li { min-width: 58px; font-size: 1.2rem; }
-    &__tools img, &__tool-name { width: 46px; height: 46px; }
+    &__tools img { width: 46px; height: 46px; }
   }
 
   .c-carousel {

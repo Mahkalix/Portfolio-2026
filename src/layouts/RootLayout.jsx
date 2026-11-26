@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Outlet, ScrollRestoration } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer.jsx";
 import Header from "../components/Header.jsx";
 import PageMetadata from "../components/PageMetadata.jsx";
@@ -65,7 +65,6 @@ function RootLayout() {
         <Outlet />
       </main>
       <Footer inert={menuOpen} />
-      <ScrollRestoration />
     </div>
   );
 }
